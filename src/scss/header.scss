@@ -1,0 +1,179 @@
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 rem(10) rem(30) rem(-10) transparent;
+    transition: box-shadow 0.5s ease 0s;
+    &::before {
+        content: "";
+        background-color: $c_dark_4;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        @media (max-width: $mobile) {
+            z-index: 5;
+        }
+    }
+    ._scroll & {
+        box-shadow: 0 rem(10) rem(30) rem(-10) $c_dark_5;
+    }
+    &__container {
+        display: flex;
+        align-items: center;
+        min-height: rem(80);
+        gap: rem(20);
+    }
+
+    &__logo {
+        position: relative;
+        z-index: 10;
+    }
+
+    &__menu {
+    }
+
+    &__btn {
+    }
+
+    &__icon {
+    }
+}
+
+.menu {
+    flex: 1 1 auto;
+
+    &__body {
+        @media (min-width: $mobile) {
+            display: flex;
+            align-items: center;
+            gap: rem(20);
+            position: relative;
+            z-index: 12;
+        }
+        @media (max-width: $mobile) {
+            position: fixed;
+            width: 80%;
+            height: 100%;
+            top: 0;
+            left: 100%;
+            background-color: $c_dark_4;
+            overflow-y: auto;
+            padding: rem(120) rem(15) rem(30) rem(15);
+            transition: left 0.5s ease-in 0s;
+            z-index: 2;
+            .menu-open & {
+                left: 20%;
+                transition: left 0.5s ease-out 0.2s;
+            }
+        }
+    }
+
+    &__background {
+        @media (max-width: $mobile) {
+            content: "";
+            position: fixed;
+            width: 80%;
+            height: 100%;
+            top: 0;
+            left: 100%;
+            background-color: $c_primary;
+            box-shadow: 0 rem(10) rem(30) rem(-10) transparent;
+            transition: left 0.5s ease-in 0.2s;
+            z-index: 1;
+            .menu-open & {
+                left: 20%;
+                transition: left 0.5s ease-out 0s;
+            }
+        }
+    }
+
+    &__list {
+        @media (min-width: $mobile) {
+            flex: 1 1 auto;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: rem(20);
+        }
+        @media (max-width: $mobile) {
+            margin-bottom: rem(40);
+        }
+        @media (max-width: $mobileSmall) {
+            text-align: center;
+        }
+    }
+
+    &__item {
+        @media (max-width: $mobile) {
+            &:not(:last-child) {
+                margin-bottom: rem(30);
+            }
+        }
+    }
+
+    &__link {
+        @extend %btn;
+        line-height: math.div(20, 16);
+        transition: color 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $c_primary;
+            }
+        }
+    }
+}
+
+.icon-menu {
+    display: none;
+    @media (max-width: $mobile) {
+        display: block;
+        position: relative;
+        width: rem(35);
+        height: rem(25);
+        cursor: pointer;
+        z-index: 5;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        -webkit-tap-highlight-color: transparent;
+        span,
+        &::before,
+        &::after {
+            content: "";
+            right: 0;
+            position: absolute;
+            width: 100%;
+            height: rem(2);
+            background-color: $c_primary;
+        }
+        &::before {
+            top: 0;
+            transition: top 0.3s ease 0.3s, transform 0.3s ease 0s;
+        }
+        &::after {
+            transition: bottom 0.3s ease 0.3s, transform 0.3s ease 0s;
+            bottom: 0;
+        }
+        span {
+            transition: opacity 0.3s ease 0s;
+            top: calc(50% - rem(1));
+        }
+        .menu-open & {
+            span {
+                opacity: 0;
+            }
+            &::before {
+                top: calc(50% - rem(1));
+                transition: top 0.3s ease 0s, transform 0.3s ease 0.3s;
+                transform: rotate(-45deg);
+            }
+            &::after {
+                bottom: calc(50% - rem(1));
+                transition: bottom 0.3s ease 0s, transform 0.3s ease 0.3s;
+                transform: rotate(45deg);
+            }
+        }
+    }
+}

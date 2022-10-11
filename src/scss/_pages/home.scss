@@ -1,0 +1,90 @@
+.fullscreen {
+    min-height: 100vh;
+    background-color: $c_dark_4;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
+        position: relative;
+    }
+
+    &__inner {
+        padding: rem(120) 0;
+    }
+
+    &__label {
+        @extend %label;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 20, 15);
+        }
+    }
+
+    &__title {
+        @extend %h1;
+        span {
+            opacity: 0.7;
+        }
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 30, 25);
+        }
+    }
+
+    &__text {
+        @extend %text;
+        max-width: rem(768);
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 40, 30);
+        }
+    }
+
+    &__btn {
+        @media (max-width: $mobileSmall) {
+            width: 100%;
+        }
+    }
+
+    &__scroll {
+        width: rem(20);
+        height: rem(30);
+        border: rem(2) solid $c_primary;
+        border-radius: rem(25);
+        cursor: pointer;
+        position: absolute;
+        left: 50%;
+        bottom: rem(60);
+        transform: translate(-50%, 0px);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        transition: border 0.3s ease 0s;
+        &::before {
+            content: "";
+            width: rem(3);
+            height: rem(6);
+            border-radius: rem(2);
+            background-color: $c_primary;
+            transition: background-color 0.3s ease 0s;
+            animation: scroll 1.5s infinite ease;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                border: rem(2) solid $c_white;
+                &::before {
+                    background-color: $c_white;
+                }
+            }
+        }
+    }
+    @keyframes scroll {
+        0% {
+            transform: translateY(rem(-3));
+        }
+        50% {
+            transform: translateY(rem(3));
+        }
+        100% {
+            transform: translateY(rem(-3));
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: rem(7);
+    &::before {
+        color: $c_primary;
+        font-size: rem(60);
+    }
+    &__text {
+        transform: translate(0px, rem(-3));
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+
+    &__top {
+        @extend %text;
+        color: $c_primary;
+        display: block;
+        margin-bottom: rem(2);
+    }
+    &__bottom {
+        font-size: rem(14);
+    }
+}
+
+//========================================================================================================================================================
+
+.page404 {
+    @include adaptiveValue("padding-top", 144, 60, 1170, 600.98, 1);
+    @include adaptiveValue("padding-bottom", 144, 100, 1170, 600.98, 1);
+    text-align: center;
+
+    &__container {
+    }
+
+    &__title {
+        // @extend %h1;
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__label {
+        // @extend %text_md;
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__button {
+        min-width: rem(160);
+        min-height: rem(56);
+        @media (max-width: $mobileSmall) {
+            width: 100%;
+        }
+    }
+}
+
+//========================================================================================================================================================
+
+.spinner {
+    text-align: center;
+    margin: rem(100) auto;
+    @include adaptiveValue("width", 400, 150, 991.98, 479.98, 1);
+    @include adaptiveValue("heigth", 300, 150, 991.98, 479.98, 1);
+    max-width: 60%;
+    svg {
+        max-width: 100%;
+        circle {
+            fill: $mainColor;
+        }
+    }
+}

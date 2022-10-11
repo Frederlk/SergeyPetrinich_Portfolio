@@ -1,0 +1,62 @@
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: rem(10) rem(20) rem(10) rem(35);
+    gap: rem(15);
+    background-color: $c_primary;
+    transition: background-color 0.3s ease-in-out 0s;
+    position: relative;
+    min-height: rem(50);
+    @extend %btn;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $c_dark_5;
+        width: rem(4);
+        height: 100%;
+        transition: width 0.3s ease-in-out 0s;
+    }
+    &::after {
+        content: "";
+        height: rem(2);
+        width: rem(0);
+        background-color: $c_white;
+        transition: width 0.3s ease-in-out 0s, margin-left 0.3s ease-in-out 0s;
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            &::before {
+                width: rem(10);
+            }
+            &::after {
+                width: rem(20);
+            }
+        }
+    }
+}
+
+.button {
+    padding: rem(10) rem(20);
+    min-height: rem(40);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: rem(2) solid $c_white;
+    color: $c_white;
+    line-height: math.div(20, 12);
+    font-size: rem(12);
+    letter-spacing: rem(1);
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: border 0.3s ease-in-out 0s, color 0.3s ease-in-out 0s;
+    @media (any-hover: hover) {
+        &:hover {
+            border: rem(2) solid $c_primary;
+            color: $c_primary;
+        }
+    }
+}
