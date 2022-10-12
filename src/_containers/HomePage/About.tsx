@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { Picture } from "../../_components";
 import Top from "../../_components/Top";
 
 const About: FC = () => {
@@ -25,7 +26,17 @@ const About: FC = () => {
                             app with the Spotify API using Node & React.
                         </p>
                     </div>
-                    <div className="about__image-ibg"></div>
+                    <div className="about__image-ibg">
+                        <Picture
+                            srcWebp={
+                                "https://sun9-85.userapi.com/impg/cJlKQVb2k0KgjOYWVXr9CEsnEo3kGCUNh8ARhw/gFwTYG-wxSw.jpg?size=862x1078&quality=96&sign=580c14e6951e16d966a1e4e9aef4ad02&type=album"
+                            }
+                            fallbackSrc={
+                                "https://sun9-85.userapi.com/impg/cJlKQVb2k0KgjOYWVXr9CEsnEo3kGCUNh8ARhw/gFwTYG-wxSw.jpg?size=862x1078&quality=96&sign=580c14e6951e16d966a1e4e9aef4ad02&type=album"
+                            }
+                            alt={"фото"}
+                        />
+                    </div>
                 </div>
             </div>
         </section>

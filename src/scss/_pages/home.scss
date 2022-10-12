@@ -88,3 +88,93 @@
         }
     }
 }
+
+//========================================================================================================================================================
+
+.about {
+    padding: rem(80) 0px;
+    &__container {
+        max-width: rem(992);
+    }
+
+    &__top {
+        margin-bottom: rem(20);
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(40);
+    }
+
+    &__content {
+        p {
+            @extend %text;
+            &:not(:last-child) {
+                margin-bottom: rem(15);
+            }
+        }
+    }
+
+    &__image-ibg {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            width: rem(200);
+            height: rem(200);
+            bottom: rem(-10);
+            right: rem(-10);
+            background-color: $c_primary;
+            z-index: -1;
+        }
+    }
+}
+
+//========================================================================================================================================================
+
+.skills {
+    &__container {
+    }
+
+    &__top {
+        margin-bottom: rem(20);
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        gap: rem(20);
+    }
+
+    &__column {
+        text-align: center;
+    }
+
+    &__subtitle {
+        @extend %label;
+        color: $c_white;
+        margin-bottom: rem(20);
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: rem(10) rem(10);
+    }
+
+    &__item {
+        @extend %text;
+        color: $c_primary;
+        &:not(:last-child) {
+            &::after {
+                content: "/";
+                margin-left: rem(10);
+                color: $c_dark_4;
+            }
+        }
+    }
+}

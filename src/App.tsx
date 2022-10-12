@@ -3,6 +3,7 @@ import { FC, Suspense } from "react";
 import { AppRouter, Spinner } from "./_components";
 import { useEventListener } from "./hooks";
 import { Footer, Header } from "./_containers";
+import Socials from "./_components/Socials";
 
 const App: FC = () => {
     useEventListener("scroll", function () {
@@ -23,6 +24,7 @@ const App: FC = () => {
                     <AppRouter />
                 </Suspense>
             </main>
+            <Socials />
             <Footer />
         </>
     );

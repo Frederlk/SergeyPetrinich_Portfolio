@@ -18,33 +18,39 @@
     }
 }
 
-._icon-logo:before {
+._icon-vk:before {
     content: "\e900";
 }
-._icon-mail:before {
+._icon-arrow:before {
     content: "\e901";
 }
-._icon-telegram:before {
+._icon-computer:before {
     content: "\e902";
 }
-._icon-vk:before {
+._icon-d20:before {
     content: "\e903";
 }
-._icon-computer:before {
-    content: "\e905";
-}
-._icon-d20:before {
-    content: "\e906";
-}
-._icon-facebook:before {
-    content: "\e907";
+._icon-fb:before {
+    content: "\e904";
 }
 ._icon-github:before {
+    content: "\e905";
+}
+._icon-in:before {
+    content: "\e906";
+}
+._icon-inst:before {
+    content: "\e907";
+}
+._icon-link:before {
     content: "\e908";
 }
-._icon-instagram:before {
+._icon-logo:before {
     content: "\e909";
 }
-._icon-linkedin:before {
+._icon-mail:before {
     content: "\e90a";
+}
+._icon-tg:before {
+    content: "\e90b";
 }
