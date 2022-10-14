@@ -92,9 +92,30 @@
 //========================================================================================================================================================
 
 .about {
-    padding: rem(80) 0px;
+    @include adaptiveValue("padding-top", 60, 30);
+    @include adaptiveValue("padding-bottom", 60, 30);
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 90%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $c_dark_5;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        width: 10%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-color: $c_dark_7;
+    }
     &__container {
-        max-width: rem(992);
+        position: relative;
+        z-index: 2;
     }
 
     &__top {
@@ -121,7 +142,7 @@
         &::after {
             content: "";
             position: absolute;
-            width: rem(200);
+            width: 50%;
             height: rem(200);
             bottom: rem(-10);
             right: rem(-10);
@@ -134,6 +155,8 @@
 //========================================================================================================================================================
 
 .skills {
+    @include adaptiveValue("padding-top", 60, 30);
+    @include adaptiveValue("padding-bottom", 60, 30);
     &__container {
     }
 
@@ -145,7 +168,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
-        gap: rem(20);
+        gap: rem(40);
     }
 
     &__column {
@@ -153,7 +176,7 @@
     }
 
     &__subtitle {
-        @extend %label;
+        @extend %text;
         color: $c_white;
         margin-bottom: rem(20);
     }
@@ -174,6 +197,114 @@
                 content: "/";
                 margin-left: rem(10);
                 color: $c_dark_4;
+            }
+        }
+    }
+}
+
+//========================================================================================================================================================
+
+.recent {
+    @include adaptiveValue("padding-top", 100, 60);
+    @include adaptiveValue("padding-bottom", 100, 60);
+    &__container {
+    }
+
+    &__top {
+        margin-bottom: rem(40);
+    }
+
+    &__body {
+        margin-bottom: rem(40);
+    }
+
+    &__item {
+    }
+
+    &__btn {
+    }
+}
+
+.item-recent {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    &__info {
+        padding: rem(30) 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__date {
+        @extend %label;
+        margin-bottom: rem(10);
+    }
+
+    &__title {
+        @extend %h1;
+        font-size: rem(36);
+        margin-bottom: rem(30);
+    }
+
+    &__description {
+        @extend %text;
+        padding: rem(20);
+        background-color: $c_dark_5;
+        margin-bottom: rem(30);
+        box-shadow: 0 rem(10) rem(30) rem(-15) $c_dark_5;
+        margin-right: rem(-100);
+    }
+
+    &__stack {
+        display: flex;
+        align-items: center;
+        gap: rem(20);
+        margin-bottom: rem(30);
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        gap: rem(40);
+    }
+
+    &__link {
+        transition: color 0.3s ease 0s;
+        font-size: rem(20);
+        @media (any-hover: hover) {
+            &:hover {
+                color: $c_primary;
+            }
+        }
+    }
+
+    &__img-ibg {
+        position: relative;
+        box-shadow: 0 rem(20) rem(30) rem(-15) transparent;
+        transition: box-shadow 0.3s ease 0s;
+        img {
+            transition: filter 0.3s ease 0s;
+            filter: grayscale(1);
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: $c_primary;
+            transition: opacity 0.3s ease 0s;
+            opacity: 0.5;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                box-shadow: 0 rem(20) rem(30) rem(-15) $c_dark_4;
+                img {
+                    filter: grayscale(0);
+                }
+                &::after {
+                    opacity: 0;
+                }
             }
         }
     }

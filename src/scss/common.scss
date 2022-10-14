@@ -53,6 +53,7 @@
     gap: rem(20);
     font-size: rem(30);
     width: rem(30);
+    z-index: 10;
     &::after {
         content: "";
         width: rem(2);
@@ -61,7 +62,6 @@
         margin-top: rem(10);
     }
     &__item {
-        // padding: rem(5);
         color: $c_white;
         transition: color 0.3s ease 0s, transform 0.3s ease 0s;
         @media (any-hover: hover) {
@@ -72,6 +72,35 @@
         }
     }
 }
+
+.email {
+    position: fixed;
+    bottom: 0;
+    right: rem(45);
+    writing-mode: vertical-rl;
+    display: flex;
+    align-items: center;
+    gap: rem(25);
+    font-weight: 500;
+    font-size: rem(18);
+    z-index: 10;
+    &::after {
+        content: "";
+        width: rem(2);
+        height: rem(150);
+        background-color: $c_white;
+        margin-top: rem(10);
+    }
+    &__item {
+        transition: color 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $c_primary;
+            }
+        }
+    }
+}
+
 //========================================================================================================================================================
 
 .page404 {
@@ -83,16 +112,16 @@
     }
 
     &__title {
-        // @extend %h1;
+        @extend %h1;
         &:not(:last-child) {
-            margin-bottom: rem(20);
+            margin-bottom: rem(40);
         }
     }
 
     &__label {
-        // @extend %text_md;
+        @extend %text;
         &:not(:last-child) {
-            margin-bottom: rem(20);
+            margin-bottom: rem(40);
         }
     }
 

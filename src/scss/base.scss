@@ -83,13 +83,3 @@
         }
     }
 }
-// Серый фильтр
-%grayfilter {
-    transition: all 0.3s ease 0s;
-    filter: grayscale(1);
-    @media (any-hover: hover) {
-        &:hover {
-            filter: grayscale(0);
-        }
-    }
-}

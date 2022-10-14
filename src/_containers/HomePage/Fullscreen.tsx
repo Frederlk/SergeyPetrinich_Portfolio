@@ -9,7 +9,7 @@ const Fullscreen: FC = () => {
                 <div className="fullscreen__inner">
                     <div className="fullscreen__label">Hello there, my name is</div>
                     <h1 className="fullscreen__title">
-                        Sergey Petrinich. <br /> <span>I’m a Frontend Developer.</span>
+                        Sergey Petrinich. <br /> <span>I’m a Front-End Developer.</span>
                     </h1>
                     <p className="fullscreen__text">
                         I’m a software engineer specializing in building (and occasionally designing)
