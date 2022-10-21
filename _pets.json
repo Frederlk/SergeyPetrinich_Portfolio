@@ -1,0 +1,50 @@
+[
+    {
+        "id": "PET_PRIME-ONE",
+        "title": "Prime One",
+        "description": "Fully responsive page of Gathering service. <br/> All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1616334379,
+        "stack": ["JavaScript", "SCSS", "HTML", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "http://prime-one.infinityfreeapp.com",
+                "title": "Home Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_GoCorona",
+        "title": "GoCorona",
+        "description": "Fully responsive page of Healthcare services. <br/> All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1646228779,
+        "stack": ["JavaScript", "SCSS", "HTML", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "https://pet-gocorona.web.app/",
+                "title": "Home Page [link 1]"
+            },  
+            {
+                "link": "https://pet-gocorona.firebaseapp.com/",
+                "title": "Home Page [link 2]"
+            }
+        ]
+    },
+    {
+        "id": "PET_Relvise",
+        "title": "Relvise",
+        "description": "A great example of a one-page business card site of a commercial company. <br/> All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1646315179,
+        "stack": ["JavaScript", "SCSS", "HTML", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "https://pet-gocorona.web.app/",
+                "title": "Home Page [link 1]"
+            },  
+            {
+                "link": "https://pet-gocorona.firebaseapp.com/",
+                "title": "Home Page [link 2]"
+            }
+        ]
+    }
+
+]

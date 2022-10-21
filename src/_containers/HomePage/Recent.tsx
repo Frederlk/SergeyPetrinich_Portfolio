@@ -15,8 +15,9 @@ const Recent: FC = () => {
                             <div className="item-recent__date">November, 2022</div>
                             <h4 className="item-recent__title">Lorem, ipsum.</h4>
                             <p className="item-recent__description">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, iste assumenda!
-                                Recusandae expedita odit velit eum ducimus quo, libero aspernatur.
+                                All elements of the user interaction with the site are animated and create a
+                                pleasant feeling of “high cost” when viewing the site, which also positively
+                                affects the attitude of potential customers to the company.
                             </p>
                             <ul className="item-recent__stack">
                                 <li className="item-recent__stack-item">React</li>
