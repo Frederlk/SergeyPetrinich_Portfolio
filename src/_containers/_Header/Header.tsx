@@ -1,5 +1,4 @@
 import { FC, useRef } from "react";
-import { Link } from "react-router-dom";
 import { useSwipeable } from "react-swipeable";
 import { Link as GoTo } from "react-scroll";
 
@@ -25,8 +24,6 @@ const Header: FC = () => {
                             <li className="menu__item">
                                 <GoTo
                                     to="about"
-                                    spy={true}
-                                    hashSpy={true}
                                     smooth={true}
                                     offset={-70}
                                     onSetActive={onCloseMenu}
@@ -39,8 +36,6 @@ const Header: FC = () => {
                             <li className="menu__item">
                                 <GoTo
                                     to="recent"
-                                    spy={true}
-                                    hashSpy={true}
                                     smooth={true}
                                     offset={-70}
                                     onSetActive={onCloseMenu}
@@ -53,8 +48,6 @@ const Header: FC = () => {
                             <li className="menu__item">
                                 <GoTo
                                     to="footer"
-                                    spy={true}
-                                    hashSpy={true}
                                     smooth={true}
                                     offset={-70}
                                     onSetActive={onCloseMenu}
@@ -65,14 +58,14 @@ const Header: FC = () => {
                                 </GoTo>
                             </li>
                         </ul>
-                        <Link
-                            to="/public/s.pdf"
+                        <a
+                            href="/public/s.pdf"
                             className="header__btn"
                             download="Sergey Petrinich CV.pdf"
                             target="_blank"
                         >
                             <span>Resume</span>
-                        </Link>
+                        </a>
                     </nav>
                 </div>
 

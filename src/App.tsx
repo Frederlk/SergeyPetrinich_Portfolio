@@ -1,9 +1,12 @@
-import { FC, Suspense } from "react";
+import { FC, Suspense, useEffect } from "react";
 
-import { AppRouter, Spinner } from "./_components";
-import { useEventListener } from "./hooks";
+import { Spinner } from "./_components";
+import { useActions, useEffectOnce, useEventListener } from "./hooks";
 import { Footer, Header } from "./_containers";
-import Socials from "./_components/Socials";
+import HomePage from "./_pages/HomePage";
+import { spollers } from "./helpers/functions";
+import dynamicAdaptive from "./helpers/dynamic_adapt";
+import { firebaseAPI } from "./services/firebaseAPI";
 
 const App: FC = () => {
     useEventListener("scroll", function () {
@@ -16,17 +19,37 @@ const App: FC = () => {
         }
     });
 
+    useEffect(() => {
+        dynamicAdaptive();
+        spollers();
+        window.scrollTo(0, 0);
+    }, []);
+
+    const { data: posts, error, isLoading } = firebaseAPI.useGetPetsQuery("PET");
+
+    useEffectOnce(() => {
+        const onPageLoad = () => {
+            document.documentElement.classList.add("_loaded");
+        };
+
+        // Check if the page has already loaded
+        if (document.readyState === "complete") {
+            onPageLoad();
+        } else {
+            window.addEventListener("load", onPageLoad);
+            // Remove the event listener when component unmounts
+            return () => window.removeEventListener("load", onPageLoad);
+        }
+    });
+
     return (
-        <>
+        <Suspense fallback={<Spinner />}>
             <Header />
             <main className="page">
-                <Suspense fallback={<Spinner />}>
-                    <AppRouter />
-                </Suspense>
+                <HomePage />
             </main>
-            {/* <Socials /> */}
             <Footer />
-        </>
+        </Suspense>
     );
 };
 

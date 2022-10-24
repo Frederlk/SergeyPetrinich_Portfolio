@@ -122,6 +122,8 @@
         position: relative;
         @extend %btn;
         transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
+        cursor: pointer;
+
         span {
             position: relative;
             z-index: 2;

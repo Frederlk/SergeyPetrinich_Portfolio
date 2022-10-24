@@ -249,6 +249,9 @@
                 .item-recent__links {
                     justify-content: flex-end;
                 }
+                .item-recent__links {
+                    flex-direction: row-reverse;
+                }
             }
         }
     }
@@ -270,11 +273,12 @@
     @media (max-width: $mobile) {
         position: relative;
     }
+
     &__info {
-        padding: rem(30) 0;
         position: relative;
         z-index: 2;
         pointer-events: none;
+        padding: rem(30) 0;
         @media (min-width: $mobile) {
             flex: 0 1 50%;
         }
@@ -286,18 +290,30 @@
         }
     }
 
+    &__slider {
+        display: flex;
+        pointer-events: all;
+        overflow: auto;
+        display: none;
+    }
+
+    &__slide-ibg {
+        flex: 0 0 100%;
+        height: rem(250);
+    }
+
     &__date {
         display: inline-block;
         @extend %label;
         color: $c_primary;
-        margin-bottom: rem(10);
+        margin-bottom: rem(5);
         pointer-events: all;
     }
 
     &__title {
         @extend %title;
-        font-size: rem(36);
-        margin-bottom: rem(30);
+        @include adaptiveValue("font-size", 36, 28);
+        margin-bottom: rem(20);
         a {
             transition: color 0.3s ease 0s;
             pointer-events: all;
@@ -310,18 +326,15 @@
     }
 
     &__description {
-        @extend %text_1;
+        @extend %text_3;
         color: $c_dark_1;
         padding: rem(20);
         background-color: $c_dark_5;
-        margin-bottom: rem(30);
+        margin-bottom: rem(20);
         box-shadow: 0 rem(10) rem(30) rem(-15) $c_dark_5;
         pointer-events: all;
         @media (min-width: $mobile) {
             margin-right: rem(-100);
-        }
-        @media (max-width: $mobile) {
-            background-color: $c_dark_6;
         }
     }
 
@@ -330,7 +343,7 @@
         align-items: center;
         flex-wrap: wrap;
         gap: rem(10);
-        margin-bottom: rem(30);
+        margin-bottom: rem(20);
     }
 
     &__stack-item {
@@ -343,7 +356,6 @@
             }
         }
     }
-
     &__links {
         display: inline-flex;
         pointer-events: all;
@@ -393,7 +405,7 @@
             top: 0;
             left: 0;
             &::after {
-                opacity: 0.8;
+                opacity: 0.95;
             }
         }
     }

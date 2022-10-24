@@ -1,8 +1,5 @@
 import { FC } from "react";
-import { Link } from "react-router-dom";
 import { Link as GoTo } from "react-scroll";
-
-import { RouteNames } from "../../routes";
 
 const Fullscreen: FC = () => {
     return (
@@ -18,9 +15,15 @@ const Fullscreen: FC = () => {
                         exceptional digital experiences. Currently, I’m focused on building accessible,
                         human-centered products at Upstatement.
                     </p>
-                    <Link to={RouteNames.PROJECTS} className="fullscreen__btn btn">
+                    <GoTo
+                        to="recent"
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                        className="fullscreen__btn btn"
+                    >
                         See My Projects
-                    </Link>
+                    </GoTo>
                 </div>
                 <GoTo
                     to="about"

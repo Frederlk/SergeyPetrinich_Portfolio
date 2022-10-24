@@ -171,13 +171,11 @@
         @extend %btn;
         line-height: math.div(20, 16);
         transition: color 0.3s ease 0s;
+        cursor: pointer;
         @media (any-hover: hover) {
             &:hover {
                 color: $c_primary;
             }
-        }
-        &.active {
-            color: $c_primary;
         }
     }
 }

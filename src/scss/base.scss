@@ -12,7 +12,7 @@
 }
 
 %title {
-    @include adaptiveValue("font-size", 72, 34);
+    @include adaptiveValue("font-size", 72, 32);
     font-weight: 800;
     line-height: math.div(85, 72);
 }

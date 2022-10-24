@@ -154,15 +154,19 @@
 //========================================================================================================================================================
 
 .spinner {
+    position: fixed;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     text-align: center;
-    margin: rem(100) auto;
-    @include adaptiveValue("width", 400, 150, 991.98, 479.98, 1);
-    @include adaptiveValue("heigth", 300, 150, 991.98, 479.98, 1);
-    max-width: 60%;
-    svg {
+    z-index: 100;
+    background-color: #191919;
+    img {
         max-width: 100%;
-        circle {
-            fill: $mainColor;
-        }
+        max-height: 100%;
     }
 }
