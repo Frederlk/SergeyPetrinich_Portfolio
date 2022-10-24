@@ -42,7 +42,7 @@ $maxWidth: 1440;
 $maxWidthContainer: 992;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
-$containerPadding: 30;
+$containerPadding: 200;
 
 // Ширина срабатывания первого брейкпоинта
 $containerWidth: $maxWidthContainer + $containerPadding;
@@ -52,11 +52,6 @@ $pc: em($containerWidth); // ПК, ноутбуки, некоторые план
 $tablet: em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
 $mobile: em(767.98); // Телефоны L
 $mobileSmall: em(479.98); // Телефоны S
-
-// Тип адаптива:
-// 1 = отзывчивость (у контейнера нет брейкпоинтов),
-// 2 = по брейк-поинтам (контейнер меняет свою ширину по брейк-поинтам)
-$responsiveType: 1;
 
 // Обнуление и общие параметры ============================================================================================================================================================================================== =============================================================================================== ===============================================================================================
 @import "base/null";
@@ -91,9 +86,13 @@ body {
             top: 0;
             left: 0;
             z-index: 10;
-            transition: backdrop-filter 0.3s ease 0.5s;
+            transition: backdrop-filter 0.3s ease 0.5s, opacity 0.3s ease 0.5s, opacity 0.3s ease 0.5s;
+            opacity: 0;
+            visibility: hidden;
             .menu-open & {
-                transition: backdrop-filter 0.3s ease 0s;
+                visibility: visible;
+                opacity: 1;
+                transition: backdrop-filter 0.3s ease 0s, opacity 0.3s ease 0s, opacity 0.3s ease 0s;
                 backdrop-filter: blur(rem(6));
                 -webkit-backdrop-filter: blur(rem(6));
             }
@@ -123,7 +122,13 @@ body {
         margin: 0 auto;
     }
     @if ($containerPadding>0) {
-        padding: 0 rem(math.div($containerPadding, 2));
+        padding: 0 rem(75);
+        @media (max-width: $mobile) {
+            padding: 0 rem(20);
+        }
+        @media (min-width: $mobile) and (max-height: $mobileSmall) {
+            padding: 0 rem(20);
+        }
     }
 }
 

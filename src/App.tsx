@@ -24,7 +24,7 @@ const App: FC = () => {
                     <AppRouter />
                 </Suspense>
             </main>
-            <Socials />
+            {/* <Socials /> */}
             <Footer />
         </>
     );

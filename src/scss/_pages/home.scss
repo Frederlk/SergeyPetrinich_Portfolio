@@ -1,27 +1,27 @@
 .fullscreen {
-    min-height: 100vh;
     background-color: $c_dark_4;
+    background: linear-gradient(180deg, rgba(56, 56, 56, 1) 0%, rgba(41, 41, 41, 1) 100%);
     &__container {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        min-height: 100vh;
         position: relative;
     }
 
     &__inner {
-        padding: rem(120) 0;
+        padding: rem(100) 0;
     }
 
     &__label {
         @extend %label;
+        color: $c_primary;
         &:not(:last-child) {
             @include adaptiveValue("margin-bottom", 20, 15);
         }
     }
 
     &__title {
-        @extend %h1;
+        @extend %title;
         span {
             opacity: 0.7;
         }
@@ -31,7 +31,8 @@
     }
 
     &__text {
-        @extend %text;
+        @extend %text_1;
+        color: $c_dark_1;
         max-width: rem(768);
         &:not(:last-child) {
             @include adaptiveValue("margin-bottom", 40, 30);
@@ -52,7 +53,7 @@
         cursor: pointer;
         position: absolute;
         left: 50%;
-        bottom: rem(60);
+        bottom: rem(40);
         transform: translate(-50%, 0px);
         display: inline-flex;
         justify-content: center;
@@ -92,45 +93,48 @@
 //========================================================================================================================================================
 
 .about {
-    @include adaptiveValue("padding-top", 60, 30);
-    @include adaptiveValue("padding-bottom", 60, 30);
+    @include adaptiveValue("padding-top", 100, 60);
+    @include adaptiveValue("padding-bottom", 100, 60);
     position: relative;
-    &::before {
-        content: "";
-        position: absolute;
-        width: 90%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-color: $c_dark_5;
-    }
-    &::after {
-        content: "";
-        position: absolute;
-        width: 10%;
-        height: 100%;
-        top: 0;
-        right: 0;
-        background-color: $c_dark_7;
-    }
+    background-color: $c_dark_5;
+
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     width: 90%;
+    //     height: 100%;
+    //     top: 0;
+    //     left: 0;
+    // }
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    //     width: 10%;
+    //     height: 100%;
+    //     top: 0;
+    //     right: 0;
+    //     background-color: $c_dark_7;
+    // }
     &__container {
         position: relative;
         z-index: 2;
     }
 
     &__top {
-        margin-bottom: rem(20);
     }
 
     &__body {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: rem(40);
+        @media (min-width: $mobile) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: rem(40);
+        }
     }
 
     &__content {
         p {
-            @extend %text;
+            @extend %text_1;
+            color: $c_dark_1;
             &:not(:last-child) {
                 margin-bottom: rem(15);
             }
@@ -139,6 +143,11 @@
 
     &__image-ibg {
         position: relative;
+        max-height: rem(400);
+        @media (max-width: $mobile) {
+            @include adaptiveValue("margin-top", 50, 30, 767.98, 320, 1);
+            @include adaptiveValue("height", 450, 250, 767.98, 320, 1);
+        }
         &::after {
             content: "";
             position: absolute;
@@ -155,29 +164,35 @@
 //========================================================================================================================================================
 
 .skills {
-    @include adaptiveValue("padding-top", 60, 30);
-    @include adaptiveValue("padding-bottom", 60, 30);
+    @include adaptiveValue("padding-top", 100, 60);
+    @include adaptiveValue("padding-bottom", 50, 30);
+    background-color: $c_dark_4;
+    background: linear-gradient(0deg, rgba(56, 56, 56, 1) 0%, rgba(41, 41, 41, 1) 100%);
     &__container {
     }
 
     &__top {
-        margin-bottom: rem(20);
     }
 
     &__body {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-        gap: rem(40);
+        @media (min-width: $mobile) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+            gap: rem(40);
+        }
     }
 
     &__column {
         text-align: center;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 50, 30, 767.98, 320, 1);
+        }
     }
 
     &__subtitle {
-        @extend %text;
-        color: $c_white;
+        @extend %text_1;
+        color: $c_dark_1;
         margin-bottom: rem(20);
     }
 
@@ -190,13 +205,13 @@
     }
 
     &__item {
-        @extend %text;
+        @extend %text_1;
         color: $c_primary;
-        &:not(:last-child) {
-            &::after {
-                content: "/";
-                margin-left: rem(10);
-                color: $c_dark_4;
+        &:not(:first-child) {
+            &::before {
+                content: "·";
+                margin-right: rem(10);
+                color: $c_white;
             }
         }
     }
@@ -205,20 +220,42 @@
 //========================================================================================================================================================
 
 .recent {
-    @include adaptiveValue("padding-top", 100, 60);
+    @include adaptiveValue("padding-top", 50, 30);
     @include adaptiveValue("padding-bottom", 100, 60);
     &__container {
     }
 
     &__top {
-        margin-bottom: rem(40);
     }
 
     &__body {
-        margin-bottom: rem(40);
     }
 
     &__item {
+        &:nth-child(even) {
+            @media (min-width: $mobile) {
+                flex-direction: row-reverse;
+                text-align: right;
+
+                .item-recent__description {
+                    margin-right: 0;
+                    margin-left: rem(-100);
+                }
+                .item-recent__img-ibg {
+                    margin-left: 0;
+                    margin-right: rem(-100);
+                }
+                .item-recent__stack,
+                .item-recent__links {
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+
+    &__btn-wrap {
+        display: flex;
+        justify-content: center;
     }
 
     &__btn {
@@ -226,50 +263,97 @@
 }
 
 .item-recent {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
+    @include adaptiveValue("margin-bottom", 100, 60);
+    @media (min-width: $mobile) {
+        display: flex;
+    }
+    @media (max-width: $mobile) {
+        position: relative;
+    }
     &__info {
         padding: rem(30) 0;
         position: relative;
         z-index: 2;
+        pointer-events: none;
+        @media (min-width: $mobile) {
+            flex: 0 1 50%;
+        }
+        @media (max-width: $mobile) {
+            padding: rem(30);
+        }
+        @media (max-width: $mobileSmall) {
+            padding: rem(30) rem(20);
+        }
     }
 
     &__date {
+        display: inline-block;
         @extend %label;
+        color: $c_primary;
         margin-bottom: rem(10);
+        pointer-events: all;
     }
 
     &__title {
-        @extend %h1;
+        @extend %title;
         font-size: rem(36);
         margin-bottom: rem(30);
+        a {
+            transition: color 0.3s ease 0s;
+            pointer-events: all;
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $c_primary;
+                }
+            }
+        }
     }
 
     &__description {
-        @extend %text;
+        @extend %text_1;
+        color: $c_dark_1;
         padding: rem(20);
         background-color: $c_dark_5;
         margin-bottom: rem(30);
         box-shadow: 0 rem(10) rem(30) rem(-15) $c_dark_5;
-        margin-right: rem(-100);
+        pointer-events: all;
+        @media (min-width: $mobile) {
+            margin-right: rem(-100);
+        }
+        @media (max-width: $mobile) {
+            background-color: $c_dark_6;
+        }
     }
 
     &__stack {
         display: flex;
         align-items: center;
-        gap: rem(20);
+        flex-wrap: wrap;
+        gap: rem(10);
         margin-bottom: rem(30);
     }
 
+    &__stack-item {
+        pointer-events: all;
+        &:not(:first-child) {
+            &::before {
+                content: "·";
+                margin-right: rem(10);
+                color: $c_primary;
+            }
+        }
+    }
+
     &__links {
-        display: flex;
+        display: inline-flex;
+        pointer-events: all;
         align-items: center;
-        gap: rem(40);
+        gap: rem(20);
     }
 
     &__link {
         transition: color 0.3s ease 0s;
-        font-size: rem(20);
+        font-size: rem(22);
         @media (any-hover: hover) {
             &:hover {
                 color: $c_primary;
@@ -279,12 +363,7 @@
 
     &__img-ibg {
         position: relative;
-        box-shadow: 0 rem(20) rem(30) rem(-15) transparent;
-        transition: box-shadow 0.3s ease 0s;
-        img {
-            transition: filter 0.3s ease 0s;
-            filter: grayscale(1);
-        }
+        box-shadow: 0 rem(20) rem(30) rem(-15) $c_dark_6;
         &::after {
             content: "";
             position: absolute;
@@ -292,19 +371,29 @@
             height: 100%;
             top: 0;
             left: 0;
-            background-color: $c_primary;
-            transition: opacity 0.3s ease 0s;
             opacity: 0.5;
+            background-color: $c_dark_6;
+            transition: opacity 0.3s ease 0s;
         }
         @media (any-hover: hover) {
             &:hover {
-                box-shadow: 0 rem(20) rem(30) rem(-15) $c_dark_4;
-                img {
-                    filter: grayscale(0);
-                }
                 &::after {
                     opacity: 0;
                 }
+            }
+        }
+        @media (min-width: $mobile) {
+            flex: 0 1 calc(50% + rem(100));
+            margin-left: rem(-100);
+        }
+        @media (max-width: $mobile) {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            &::after {
+                opacity: 0.8;
             }
         }
     }

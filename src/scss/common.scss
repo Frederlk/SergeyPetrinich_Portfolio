@@ -4,7 +4,7 @@
     gap: rem(7);
     &::before {
         color: $c_primary;
-        font-size: rem(60);
+        font-size: rem(50);
     }
     &__text {
         transform: translate(0px, rem(-3));
@@ -14,7 +14,7 @@
     }
 
     &__top {
-        @extend %text;
+        @extend %text_1;
         color: $c_primary;
         display: block;
         margin-bottom: rem(2);
@@ -30,8 +30,9 @@
     display: flex;
     align-items: center;
     gap: rem(20);
+    @include adaptiveValue("margin-bottom", 50, 30);
     &__title {
-        @extend %h1;
+        @extend %title;
     }
 
     &__line {
@@ -44,22 +45,32 @@
 //========================================================================================================================================================
 
 .socials {
-    position: fixed;
-    bottom: 0;
-    left: rem(45);
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: rem(20);
-    font-size: rem(30);
-    width: rem(30);
-    z-index: 10;
-    &::after {
-        content: "";
-        width: rem(2);
-        height: rem(150);
-        background-color: $c_white;
-        margin-top: rem(10);
+    font-size: rem(25);
+    @media (max-width: em(1200)) {
+        left: rem(20) !important;
+    }
+    @media (min-width: $mobile) {
+        flex-direction: column;
+        z-index: 10;
+        position: fixed;
+        left: rem(45);
+        bottom: 0;
+        width: rem(25);
+        &::after {
+            content: "";
+            width: rem(2);
+            height: 10vh;
+            background-color: $c_white;
+        }
+    }
+    @media (max-width: $mobile) {
+        margin-bottom: rem(30);
+    }
+    @media (min-width: $mobile) and (max-height: $mobileSmall) {
+        display: none;
     }
     &__item {
         color: $c_white;
@@ -81,20 +92,26 @@
     display: flex;
     align-items: center;
     gap: rem(25);
-    font-weight: 500;
-    font-size: rem(18);
+    font-size: rem(16);
+    letter-spacing: em(1.9);
     z-index: 10;
     &::after {
         content: "";
         width: rem(2);
-        height: rem(150);
+        height: 10vh;
         background-color: $c_white;
-        margin-top: rem(10);
+    }
+    @media (max-width: em(1200)) {
+        right: rem(20);
+    }
+    @media (max-width: $mobile) or (max-height: $mobileSmall) {
+        display: none;
     }
     &__item {
-        transition: color 0.3s ease 0s;
+        transition: color 0.3s ease 0s, transform 0.3s ease 0s;
         @media (any-hover: hover) {
             &:hover {
+                transform: translate(0px, rem(-5));
                 color: $c_primary;
             }
         }
@@ -112,14 +129,14 @@
     }
 
     &__title {
-        @extend %h1;
+        @extend %title;
         &:not(:last-child) {
             margin-bottom: rem(40);
         }
     }
 
     &__label {
-        @extend %text;
+        @extend %text_1;
         &:not(:last-child) {
             margin-bottom: rem(40);
         }

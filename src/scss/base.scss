@@ -5,44 +5,58 @@
 //========================================================================================================================================================
 
 %label {
-    color: $c_primary;
     text-transform: uppercase;
     letter-spacing: 0.4em;
     line-height: math.div(20, 14);
     @include adaptiveValue("font-size", 14, 12);
 }
 
-%h1 {
+%title {
     @include adaptiveValue("font-size", 72, 34);
     font-weight: 800;
     line-height: math.div(85, 72);
 }
 
-%text {
-    color: $c_dark_1;
+%text_1 {
     @include adaptiveValue("font-size", 22, 18);
     font-weight: 500;
     line-height: math.div(30, 22);
 }
 
+%text_2 {
+    @extend %text_1;
+    font-weight: 800;
+}
+
+%text_3 {
+    font-size: rem(16);
+    font-weight: 500;
+    line-height: math.div(25, 16);
+}
+
 %btn {
     letter-spacing: rem(1);
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: 500;
     font-size: rem(16);
+}
+
+%tag {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: rem(30);
+    padding: 0px rem(10);
+    background-color: $c_primary;
+    border-radius: rem(5);
+    color: $c_dark_5;
 }
 
 // Стили попапов
 // @import "base/popup";
 
-// Стили блока "показать еще"
-// @import "base/showmore";
-
 // Стили для полноэкранного блока
-// @import "base/fullscreen";
-
-// Стили для липкого блока
-// @import "base/sticky";
+@import "base/fullscreen";
 
 // Стили для отзывчивых картинок (IBG)
 // Сниппет (HTML): ibg (div c картинкой и классами)
@@ -56,30 +70,5 @@
         top: 0;
         left: 0;
         object-fit: cover;
-    }
-}
-[class*="-ibg_contain"] {
-    img {
-        object-fit: contain;
-    }
-}
-
-// Шаблоны (заготовки)
-// @extend %имя шаблона;
-// Сниппет (SCSS): ex
-
-// Счетчик для списка
-%listCounter {
-    list-style-type: none;
-    counter-reset: item;
-    li {
-        position: relative;
-        &:before {
-            counter-increment: item;
-            content: counter(item);
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
     }
 }

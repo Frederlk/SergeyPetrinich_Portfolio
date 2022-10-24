@@ -7,7 +7,7 @@
     background-color: $c_primary;
     transition: background-color 0.3s ease-in-out 0s;
     position: relative;
-    min-height: rem(50);
+    min-height: rem(55);
     @extend %btn;
     &::before {
         content: "";

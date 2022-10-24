@@ -37,7 +37,7 @@ const Skills: FC = () => {
                 <Top className="skills__top" title="Skills" />
                 <div className="skills__body">
                     <div className="skills__column">
-                        <h4 className="skills__subtitle">Technologies and Tools I&apos;m familiar with:</h4>
+                        <h4 className="skills__subtitle">Technologies I&apos;m familiar with:</h4>
                         <ul className="skills__list">{familiarItems(familiarTechs)}</ul>
                     </div>
                     <div className="skills__column">

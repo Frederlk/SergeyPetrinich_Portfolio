@@ -1,11 +1,13 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
+import { Link as GoTo } from "react-scroll";
+
 import { RouteNames } from "../../routes";
 
 const Fullscreen: FC = () => {
     return (
         <div className="fullscreen">
-            <div className="fullscreen__container">
+            <div data-fullscreen="" className="fullscreen__container">
                 <div className="fullscreen__inner">
                     <div className="fullscreen__label">Hello there, my name is</div>
                     <h1 className="fullscreen__title">
@@ -20,7 +22,13 @@ const Fullscreen: FC = () => {
                         See My Projects
                     </Link>
                 </div>
-                <div className="fullscreen__scroll"></div>
+                <GoTo
+                    to="about"
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    className="fullscreen__scroll"
+                ></GoTo>
             </div>
         </div>
     );

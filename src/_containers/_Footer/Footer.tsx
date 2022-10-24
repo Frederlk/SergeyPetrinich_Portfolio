@@ -1,4 +1,6 @@
 import { FC } from "react";
+import { Link as GoTo } from "react-scroll";
+import Socials from "../../_components/Socials";
 
 const Footer: FC = () => {
     return (
@@ -12,6 +14,7 @@ const Footer: FC = () => {
                                 I’m looking for any new opportunities, my inbox is always open. Whether you
                                 have a question or just want to say hi, I’ll try my best to get back to you!
                             </p>
+                            <Socials />
                             <div className="info-footer__links">
                                 <a
                                     href="mailto:petrinich.sergey@gmail.com"
@@ -28,7 +31,7 @@ const Footer: FC = () => {
                                     href="https://www.google.com/maps/place/Minsk/@53.8847608,27.4532868,11z/data=!4m5!3m4!1s0x46dbcfd35b1e6ad3:0xb61b853ddb570d9!8m2!3d53.9006011!4d27.558972?hl=en"
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="info-footer__link _icon-marker"
+                                    className="info-footer__link _icon-pin"
                                 >
                                     <span>Address: </span>
                                     Minsk, Belarus
@@ -41,9 +44,9 @@ const Footer: FC = () => {
                     <div className="footer__copy">
                         <span>© 2022</span> Sergey Petrinich
                     </div>
-                    <button type="button" className="footer__totop">
+                    <GoTo to="wrapper" smooth={true} duration={500} className="footer__totop _icon-arrow">
                         <span>To top</span>
-                    </button>
+                    </GoTo>
                 </div>
                 <div className="footer__lines">
                     <div className="footer__line"></div>

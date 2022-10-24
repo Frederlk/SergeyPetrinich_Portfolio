@@ -1,15 +1,17 @@
 import { FC, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useSwipeable } from "react-swipeable";
+import { Link as GoTo } from "react-scroll";
+
 import useMenu from "../../store/slices/menu/useMenu";
 import Logo from "../../_components/Logo";
 
 const Header: FC = () => {
     const ref = useRef(null);
-    const { onToggleMenu } = useMenu(ref);
+    const { onToggleMenu, onCloseMenu } = useMenu(ref);
 
     const handlers = useSwipeable({
-        onSwipedRight: onToggleMenu,
+        onSwipedRight: onCloseMenu,
     });
 
     return (
@@ -21,28 +23,55 @@ const Header: FC = () => {
                     <nav {...handlers} className="menu__body">
                         <ul className="menu__list">
                             <li className="menu__item">
-                                <a href="" className="menu__link">
+                                <GoTo
+                                    to="about"
+                                    spy={true}
+                                    hashSpy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    onSetActive={onCloseMenu}
+                                    duration={500}
+                                    className="menu__link"
+                                >
                                     About
-                                </a>
+                                </GoTo>
                             </li>
                             <li className="menu__item">
-                                <a href="" className="menu__link">
+                                <GoTo
+                                    to="recent"
+                                    spy={true}
+                                    hashSpy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    onSetActive={onCloseMenu}
+                                    duration={500}
+                                    className="menu__link"
+                                >
                                     Projects
-                                </a>
+                                </GoTo>
                             </li>
                             <li className="menu__item">
-                                <a href="" className="menu__link">
+                                <GoTo
+                                    to="footer"
+                                    spy={true}
+                                    hashSpy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    onSetActive={onCloseMenu}
+                                    duration={500}
+                                    className="menu__link"
+                                >
                                     Contact
-                                </a>
+                                </GoTo>
                             </li>
                         </ul>
                         <Link
                             to="/public/s.pdf"
-                            className="header__btn btn"
+                            className="header__btn"
                             download="Sergey Petrinich CV.pdf"
                             target="_blank"
                         >
-                            Resume
+                            <span>Resume</span>
                         </Link>
                     </nav>
                 </div>
