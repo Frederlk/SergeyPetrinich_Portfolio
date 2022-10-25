@@ -1,6 +1,6 @@
 import { FC, useMemo } from "react";
 import { Link as GoTo } from "react-scroll";
-import { sortData } from "../../helpers/functions";
+import { IPet } from "../../models/models";
 import { firebaseAPI } from "../../services/firebaseAPI";
 import Top from "../../_components/Top";
 import RecentItem from "./RecentItem";
@@ -10,10 +10,7 @@ const Recent: FC = () => {
 
     const sortedPets = useMemo(() => {
         if (pets && pets.length > 0) {
-            return pets
-                .slice()
-                .sort((a, b) => sortData(a.releaseDate, b.releaseDate))
-                .map((pet, i) => i < 3 && <RecentItem key={pet.id} item={pet} />);
+            return pets.map((pet: IPet, i) => i < 3 && <RecentItem key={pet.id} item={pet} />);
         }
     }, [pets]);
 
@@ -23,7 +20,7 @@ const Recent: FC = () => {
                 <Top className="recent__top" title="Recent Projects" />
                 <div className="recent__body">{sortedPets}</div>
                 <div className="recent__btn-wrap">
-                    <GoTo to="recent" smooth={true} offset={-70} duration={500} className="recent__btn btn">
+                    <GoTo to="archive" smooth={true} offset={-70} duration={500} className="recent__btn btn">
                         More Projects
                     </GoTo>
                 </div>

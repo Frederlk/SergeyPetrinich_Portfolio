@@ -22,7 +22,7 @@ const Socials: FC = () => {
                 <a href={Links.TG} target="_blank" rel="noreferrer" className="socials__item _icon-tg"></a>
                 <a href={Links.IN} target="_blank" rel="noreferrer" className="socials__item _icon-in"></a>
             </div>
-            <div className="email">
+            <div data-lp="" className="email">
                 <a href="mailto:petrinich.sergey@gmail.com" className="email__item">
                     petrinich.sergey@gmail.com
                 </a>

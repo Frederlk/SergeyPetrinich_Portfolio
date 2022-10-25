@@ -2,6 +2,10 @@
 // Для подключения/отключения стилей конкретного єлемента формы смотри base/forms/forms.scss
 @import "base/forms/forms";
 
+@import "base/popup";
+
+@import "base/swiper";
+
 //========================================================================================================================================================
 
 %label {
@@ -15,6 +19,18 @@
     @include adaptiveValue("font-size", 72, 32);
     font-weight: 800;
     line-height: math.div(85, 72);
+}
+
+%title_2 {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 36, 28);
+    line-height: math.div(40, 36);
+}
+
+%title_3 {
+    font-weight: 500;
+    @include adaptiveValue("font-size", 28, 24);
+    line-height: math.div(32, 28);
 }
 
 %text_1 {

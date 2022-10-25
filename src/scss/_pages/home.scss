@@ -40,6 +40,7 @@
     }
 
     &__btn {
+        cursor: pointer;
         @media (max-width: $mobileSmall) {
             width: 100%;
         }
@@ -201,7 +202,7 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        gap: rem(10) rem(10);
+        gap: rem(10);
     }
 
     &__item {
@@ -262,6 +263,7 @@
     }
 
     &__btn {
+        cursor: pointer;
     }
 }
 
@@ -290,18 +292,6 @@
         }
     }
 
-    &__slider {
-        display: flex;
-        pointer-events: all;
-        overflow: auto;
-        display: none;
-    }
-
-    &__slide-ibg {
-        flex: 0 0 100%;
-        height: rem(250);
-    }
-
     &__date {
         display: inline-block;
         @extend %label;
@@ -314,10 +304,11 @@
         @extend %title;
         @include adaptiveValue("font-size", 36, 28);
         margin-bottom: rem(20);
-        a {
-            transition: color 0.3s ease 0s;
+        span {
             pointer-events: all;
+            cursor: pointer;
             @media (any-hover: hover) {
+                transition: color 0.3s ease 0s;
                 &:hover {
                     color: $c_primary;
                 }
@@ -357,24 +348,13 @@
         }
     }
     &__links {
-        display: inline-flex;
+        display: inline-block;
         pointer-events: all;
-        align-items: center;
-        gap: rem(20);
-    }
-
-    &__link {
-        transition: color 0.3s ease 0s;
-        font-size: rem(22);
-        @media (any-hover: hover) {
-            &:hover {
-                color: $c_primary;
-            }
-        }
     }
 
     &__img-ibg {
         position: relative;
+        cursor: pointer;
         box-shadow: 0 rem(20) rem(30) rem(-15) $c_dark_6;
         &::after {
             content: "";
@@ -406,6 +386,139 @@
             left: 0;
             &::after {
                 opacity: 0.95;
+            }
+        }
+    }
+}
+
+//========================================================================================================================================================
+
+.archive {
+    @include adaptiveValue("padding-top", 50, 30);
+    @include adaptiveValue("padding-bottom", 100, 60);
+    &__container {
+    }
+
+    &__top {
+        margin-bottom: rem(20);
+    }
+
+    &__subtitle {
+        @extend %text_1;
+        color: $c_primary;
+        margin-bottom: rem(50);
+    }
+
+    &__body {
+    }
+
+    &__panel {
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+        min-height: rem(60);
+        &_item {
+            @media (any-hover: hover) {
+                margin: 0px rem(-20);
+                padding: 0px rem(20);
+                transition: background-color 0.3s ease 0s;
+                &:hover {
+                    background-color: rgba(38, 38, 39, 0.5);
+                }
+            }
+        }
+        @media (max-width: $mobile) {
+            min-height: rem(50);
+        }
+    }
+
+    &__date {
+        flex: 0 0 rem(100);
+        .archive__panel_top & {
+            @extend %text_1;
+            color: $c_dark_1;
+        }
+        .archive__panel_item & {
+            cursor: pointer;
+            color: $c_primary;
+            @extend %label;
+            font-size: rem(14);
+        }
+        @media (max-width: em(400)) {
+            display: none;
+        }
+    }
+
+    &__title {
+        @extend %text_2;
+        flex: 0 0 rem(150);
+        .archive__panel_top & {
+            @extend %text_1;
+            color: $c_dark_1 !important;
+        }
+        .archive__panel_item & {
+            cursor: pointer;
+            @media (any-hover: hover) {
+                transition: color 0.3s ease 0s;
+                &:hover {
+                    color: $c_primary;
+                }
+            }
+        }
+        @media (max-width: $mobile) {
+            flex: 1 1 auto;
+        }
+    }
+
+    &__stack {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: rem(5) rem(10);
+        .archive__panel_top & {
+            @extend %text_1;
+            color: $c_dark_1;
+        }
+        .archive__panel_item & {
+            cursor: pointer;
+        }
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+
+    &__stack-item {
+        color: $c_dark_1;
+        &:not(:first-child) {
+            &::before {
+                content: "·";
+                margin-right: rem(10);
+                color: $c_primary;
+            }
+        }
+    }
+
+    &__links {
+        flex: 0 0 rem(55);
+        display: flex;
+        align-items: center;
+        gap: rem(20);
+        .archive__panel_top & {
+            @extend %text_1;
+            color: $c_dark_1;
+        }
+        @media (max-width: $mobile) {
+            flex: 0 0 rem(70);
+        }
+    }
+
+    &__link {
+        transition: color 0.3s ease 0s;
+        font-size: rem(22);
+        @media (any-hover: hover) {
+            &:hover {
+                color: $c_primary;
             }
         }
     }

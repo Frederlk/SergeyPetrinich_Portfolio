@@ -6,7 +6,6 @@ import { Footer, Header } from "./_containers";
 import HomePage from "./_pages/HomePage";
 import { spollers } from "./helpers/functions";
 import dynamicAdaptive from "./helpers/dynamic_adapt";
-import { firebaseAPI } from "./services/firebaseAPI";
 
 const App: FC = () => {
     useEventListener("scroll", function () {
@@ -24,8 +23,6 @@ const App: FC = () => {
         spollers();
         window.scrollTo(0, 0);
     }, []);
-
-    const { data: posts, error, isLoading } = firebaseAPI.useGetPetsQuery("PET");
 
     useEffectOnce(() => {
         const onPageLoad = () => {

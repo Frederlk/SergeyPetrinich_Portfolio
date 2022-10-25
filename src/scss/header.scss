@@ -113,7 +113,7 @@
             padding: rem(120) rem(15) rem(30) rem(15);
             transition: left 0.5s ease-in 0s;
             z-index: 2;
-            @include scrollbars(rem(12), $c_primary, $c_dark_5);
+            @include scrollbars(rem(10), $c_primary, $c_dark_5);
             .menu-open & {
                 left: 20%;
                 transition: left 0.5s ease-out 0.2s;

@@ -1,61 +1,236 @@
-body::after {
-	content: "";
-	background-color: rgba(0, 0, 0, 0.5);
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	opacity: 0;
-	transition: opacity 0.8s ease 0s;
-	pointer-events: none;
-	z-index: 149;
-}
-.popup-show body::after {
-	opacity: 1;
-}
 .popup {
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	padding: 30px 10px;
-	transition: visibility 0.8s ease 0s;
-	visibility: hidden;
-	pointer-events: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: rem(30);
+    text-align: left;
+    @media (max-width: em(400)) {
+        padding: rem(20);
+    }
+    &__wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: all;
+    }
+    &__content {
+        pointer-events: all;
+        position: relative;
+        z-index: 2;
+        background-color: $c_light_1;
+        width: 100%;
+        max-width: rem(768);
+        max-height: 80vh;
+        overflow: auto;
+        box-shadow: 0 rem(20) rem(30) rem(-15) $c_dark_6;
+        @include scrollbars(rem(10), $c_primary, $c_dark_5);
+        .popup-enter & {
+            opacity: 0;
+            transform: scale(0.01);
+        }
+        .popup-enter-done & {
+            transition: opacity 0.3s ease-out 0.3s, transform 0.3s ease-out 0.3s;
+            opacity: 1;
+            transform: scale(1);
+        }
+        .popup-exit & {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .popup-exit-active & {
+            opacity: 0;
+            transform: scale(0.01);
+            transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+        }
+        @media (max-width: em(400)) {
+            max-height: 90vh;
+        }
+    }
+    &__close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        color: $c_primary;
+        background-color: $c_dark_6;
+        font-size: rem(24);
+        width: rem(50);
+        height: rem(50);
+        flex: 0 0 rem(50);
+        @media (any-hover: hover) {
+            transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
+            &:hover {
+                color: $c_dark_6;
+                background-color: $c_primary;
+            }
+        }
+        @media (max-width: $mobile) {
+            width: rem(40);
+            height: rem(40);
+            flex: 0 0 rem(40);
+            font-size: rem(18);
+        }
+    }
 }
-.popup_show {
-	z-index: 150;
-	visibility: visible;
-	overflow: auto;
-	pointer-events: auto;
-}
-.popup_show .popup__content {
-	visibility: visible;
-	transform: scale(1);
-}
-.popup__wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	min-height: 100%;
-	flex: 1 1 auto;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.popup__content {
-	visibility: hidden;
-	transform: scale(0);
-	transition: transform 0.3s ease 0s;
-	background-color: #eee;
-	padding: 20px;
-	width: 100%;
-	max-width: 900px;
-	border-radius: 20px;
-	.lock & {
-		visibility: visible;
-	}
+
+.archive-popup {
+    &__slider {
+        position: relative;
+    }
+
+    &__swiper {
+    }
+
+    &__image-ibg {
+        cursor: grab;
+        @include adaptiveValue("min-height", 400, 200);
+    }
+
+    &__nav {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        pointer-events: none;
+    }
+
+    &__nav-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: rem(24);
+        width: rem(50);
+        height: rem(50);
+        flex: 0 0 rem(50);
+        color: $c_primary;
+        background-color: $c_dark_6;
+        pointer-events: all;
+        @media (any-hover: hover) {
+            transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
+            &:hover {
+                color: $c_dark_6;
+                background-color: $c_primary;
+            }
+        }
+        &._prev {
+            transform: rotate(-180deg);
+            @media (min-width: $mobile) {
+                &::before {
+                    margin-top: rem(3);
+                }
+            }
+        }
+        @media (min-width: $mobile) {
+            &._prev::before {
+                margin-top: rem(3);
+            }
+        }
+        @media (max-width: $mobile) {
+            width: rem(40);
+            height: rem(40);
+            flex: 0 0 rem(40);
+            font-size: rem(18);
+        }
+    }
+
+    &__body {
+        padding: rem(30) rem(20);
+    }
+
+    &__title {
+        @extend %title_2;
+        color: $c_primary;
+        margin-bottom: rem(15);
+        display: inline-flex;
+        align-items: center;
+        gap: rem(30);
+        a {
+            @media (any-hover: hover) {
+                transition: color 0.3s ease 0s;
+                &:hover {
+                    color: $c_dark_4;
+                }
+            }
+        }
+        a:last-child {
+            color: $c_dark_4;
+            font-size: rem(30);
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $c_primary;
+                }
+            }
+        }
+    }
+
+    &__description {
+        @extend %text_3;
+        color: $c_dark_3;
+        margin-bottom: rem(20);
+    }
+
+    &__subtitle {
+        @extend %title_3;
+        color: $c_dark_6;
+        margin-bottom: rem(10);
+    }
+
+    &__stack {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: rem(5) rem(10);
+        margin-bottom: rem(20);
+        color: $c_dark_3;
+    }
+
+    &__stack-item {
+        @extend %text_3;
+        &:not(:first-child) {
+            &::before {
+                content: "·";
+                margin-right: rem(10);
+                color: $c_primary;
+            }
+        }
+    }
+
+    &__links {
+        margin-bottom: rem(20);
+    }
+
+    &__link {
+        color: $c_dark_3;
+        @extend %text_3;
+        &:not(:last-child) {
+            margin-bottom: rem(5);
+        }
+        a {
+            @media (any-hover: hover) {
+                transition: color 0.3s ease 0s;
+                &:hover {
+                    color: $c_primary;
+                }
+            }
+        }
+    }
+
+    &__date {
+        @extend %label;
+        color: $c_primary;
+    }
 }

@@ -1,6 +1,8 @@
 .footer {
     background-color: $c_dark_6;
     overflow: hidden;
+    box-shadow: 0 rem(-10) rem(30) rem(-10) $c_dark_5;
+
     &__container {
         @include adaptiveValue("padding-top", 100, 60);
         position: relative;

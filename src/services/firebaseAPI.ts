@@ -1,3 +1,4 @@
+import { sortData } from "./../helpers/functions";
 import { IImg, IPet } from "./../models/models";
 import { db, storage } from "../firebaseConfig";
 import { createApi, fakeBaseQuery } from "@reduxjs/toolkit/query/react";
@@ -17,7 +18,7 @@ export const firebaseAPI = createApi({
                     querySnapshot?.forEach((doc) => {
                         PET.push(doc.data() as IPet);
                     });
-                    return { data: PET };
+                    return { data: PET.slice().sort((a, b) => sortData(a.releaseDate, b.releaseDate)) };
                 } catch (e) {
                     return { error: e };
                 }
