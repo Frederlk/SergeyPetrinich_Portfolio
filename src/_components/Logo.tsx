@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import { Link as GoTo } from "react-scroll";
 import useMenu from "../store/slices/menu/useMenu";
 
@@ -22,4 +22,4 @@ const Logo: FC<{ className?: string }> = ({ className }) => {
     );
 };
 
-export default Logo;
+export default memo(Logo);

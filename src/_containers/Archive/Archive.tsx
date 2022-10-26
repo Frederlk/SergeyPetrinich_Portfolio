@@ -1,7 +1,6 @@
 import { FC, useMemo } from "react";
 import { firebaseAPI } from "../../services/firebaseAPI";
-import { Spinner } from "../../_components";
-import Top from "../../_components/Top";
+import { Spinner, Top } from "../../_components";
 import ArchiveItem from "./ArchiveItem";
 
 const Archive: FC = () => {

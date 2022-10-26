@@ -1,10 +1,11 @@
 import { FC, useMemo } from "react";
-import parse from "html-react-parser";
 import { format } from "date-fns";
+import parse from "html-react-parser";
 
 import { IPet } from "../../models/models";
-import ArchiveSlider from "./ArchiveSlider";
 import { Links } from "../../constants/links";
+import ArchiveSlider from "./ArchiveSlider";
+import { Stack } from "../../_components";
 
 const ArhivePopup: FC<{ pet: IPet }> = ({ pet }) => {
     const { description, externalLinks, id, releaseDate, stack, title } = pet;
@@ -19,16 +20,6 @@ const ArhivePopup: FC<{ pet: IPet }> = ({ pet }) => {
                 </li>
             )),
         [externalLinks]
-    );
-
-    const stackItems = useMemo(
-        () =>
-            stack.map((item, i) => (
-                <li key={item + i} className="archive-popup__stack-item">
-                    {item}
-                </li>
-            )),
-        [stack]
     );
 
     return (
@@ -48,7 +39,7 @@ const ArhivePopup: FC<{ pet: IPet }> = ({ pet }) => {
                 </h2>
                 <div className="archive-popup__description">{parse(description)}</div>
                 <h3 className="archive-popup__subtitle">Stack</h3>
-                <ul className="archive-popup__stack">{stackItems}</ul>
+                <Stack className="archive-popup__stack" stack={stack} />
                 <h3 className="archive-popup__subtitle">External Links</h3>
                 <ul className="archive-popup__links">{links}</ul>
                 <h3 className="archive-popup__subtitle">Built Date</h3>

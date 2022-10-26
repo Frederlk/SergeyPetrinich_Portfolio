@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import { Links } from "../constants/links";
 
 const ExternalLinks: FC<{ className: string; link: string; id: string }> = ({ className, id, link }) => {
@@ -15,4 +15,4 @@ const ExternalLinks: FC<{ className: string; link: string; id: string }> = ({ cl
     );
 };
 
-export default ExternalLinks;
+export default memo(ExternalLinks);

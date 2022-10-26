@@ -1,9 +1,5 @@
-// Общий файл элементов форм
-// Для подключения/отключения стилей конкретного єлемента формы смотри base/forms/forms.scss
-@import "base/forms/forms";
-
+@import "base/button";
 @import "base/popup";
-
 @import "base/swiper";
 
 //========================================================================================================================================================
@@ -68,12 +64,6 @@
     color: $c_dark_5;
 }
 
-// Стили попапов
-// @import "base/popup";
-
-// Стили для полноэкранного блока
-@import "base/fullscreen";
-
 // Стили для отзывчивых картинок (IBG)
 // Сниппет (HTML): ibg (div c картинкой и классами)
 // Сниппет (HTML): ibga (a c картинкой и классами)
@@ -86,5 +76,15 @@
         top: 0;
         left: 0;
         object-fit: cover;
+    }
+}
+
+[data-fullscreen] {
+    min-height: 100vh;
+    .touch & {
+        min-height: calc(var(--vh, 1vh) * 100);
+        @media (max-width: $mobile) {
+            transition: height 0.2s;
+        }
     }
 }

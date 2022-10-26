@@ -1,9 +1,7 @@
-import { FC, Suspense, useEffect } from "react";
+import { FC, useEffect } from "react";
 
-import { Spinner } from "./_components";
-import { useActions, useEffectOnce, useEventListener } from "./hooks";
-import { Footer, Header } from "./_containers";
-import HomePage from "./_pages/HomePage";
+import { useEffectOnce, useEventListener } from "./hooks";
+import { About, Archive, Footer, Fullscreen, Header, Recent, Skills } from "./_containers";
 import { spollers } from "./helpers/functions";
 import dynamicAdaptive from "./helpers/dynamic_adapt";
 
@@ -40,13 +38,17 @@ const App: FC = () => {
     });
 
     return (
-        <Suspense fallback={<Spinner />}>
+        <>
             <Header />
             <main className="page">
-                <HomePage />
+                <Fullscreen />
+                <About />
+                <Skills />
+                <Recent />
+                <Archive />
             </main>
             <Footer />
-        </Suspense>
+        </>
     );
 };
 

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Link as GoTo } from "react-scroll";
-import Socials from "../../_components/Socials";
+import { Socials } from "../../_components";
 
 const Footer: FC = () => {
     return (

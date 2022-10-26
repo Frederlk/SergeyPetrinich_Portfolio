@@ -417,6 +417,9 @@
         align-items: center;
         gap: rem(10);
         min-height: rem(60);
+        @media (max-width: $mobile) {
+            min-height: rem(50);
+        }
         &_item {
             @media (any-hover: hover) {
                 margin: 0px rem(-20);
@@ -427,6 +430,15 @@
                 }
             }
         }
+    }
+
+    &__wrap {
+        display: flex;
+        flex: 1 1 auto;
+        gap: rem(10);
+        align-items: center;
+        cursor: pointer;
+        min-height: rem(60);
         @media (max-width: $mobile) {
             min-height: rem(50);
         }
@@ -439,7 +451,6 @@
             color: $c_dark_1;
         }
         .archive__panel_item & {
-            cursor: pointer;
             color: $c_primary;
             @extend %label;
             font-size: rem(14);
@@ -457,7 +468,6 @@
             color: $c_dark_1 !important;
         }
         .archive__panel_item & {
-            cursor: pointer;
             @media (any-hover: hover) {
                 transition: color 0.3s ease 0s;
                 &:hover {
@@ -479,9 +489,6 @@
         .archive__panel_top & {
             @extend %text_1;
             color: $c_dark_1;
-        }
-        .archive__panel_item & {
-            cursor: pointer;
         }
         @media (max-width: $mobile) {
             display: none;

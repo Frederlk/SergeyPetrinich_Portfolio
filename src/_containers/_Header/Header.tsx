@@ -1,9 +1,9 @@
 import { FC, useRef } from "react";
 import { useSwipeable } from "react-swipeable";
-import { Link as GoTo } from "react-scroll";
 
 import useMenu from "../../store/slices/menu/useMenu";
-import Logo from "../../_components/Logo";
+import { Logo } from "../../_components";
+import HeaderLink from "./HeaderLink";
 
 const Header: FC = () => {
     const ref = useRef(null);
@@ -21,42 +21,9 @@ const Header: FC = () => {
                     <span className="menu__background"></span>
                     <nav {...handlers} className="menu__body">
                         <ul className="menu__list">
-                            <li className="menu__item">
-                                <GoTo
-                                    to="about"
-                                    smooth={true}
-                                    offset={-70}
-                                    onSetActive={onCloseMenu}
-                                    duration={500}
-                                    className="menu__link"
-                                >
-                                    About
-                                </GoTo>
-                            </li>
-                            <li className="menu__item">
-                                <GoTo
-                                    to="recent"
-                                    smooth={true}
-                                    offset={-70}
-                                    onSetActive={onCloseMenu}
-                                    duration={500}
-                                    className="menu__link"
-                                >
-                                    Projects
-                                </GoTo>
-                            </li>
-                            <li className="menu__item">
-                                <GoTo
-                                    to="footer"
-                                    smooth={true}
-                                    offset={-70}
-                                    onSetActive={onCloseMenu}
-                                    duration={500}
-                                    className="menu__link"
-                                >
-                                    Contact
-                                </GoTo>
-                            </li>
+                            <HeaderLink goto="about" onCloseMenu={onCloseMenu} title="About" />
+                            <HeaderLink goto="recent" onCloseMenu={onCloseMenu} title="Projects" />
+                            <HeaderLink goto="footer" onCloseMenu={onCloseMenu} title="Contact" />
                         </ul>
                         <a
                             href="/public/s.pdf"

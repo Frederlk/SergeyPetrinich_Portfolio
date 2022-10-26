@@ -2,12 +2,10 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { firebaseAPI } from "./../services/firebaseAPI";
 import { bodyLockReducer } from "./slices/bodyLock/bodyLock.slice";
 import { menuReducer } from "./slices/menu/menu.slice";
-import { petsReducer } from "./slices/pets/pets.slice";
 
 const rootReducer = combineReducers({
     bodyLock: bodyLockReducer,
     menu: menuReducer,
-    pets: petsReducer,
     [firebaseAPI.reducerPath]: firebaseAPI.reducer,
 });
 

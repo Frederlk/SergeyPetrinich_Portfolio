@@ -6,7 +6,8 @@ import parse from "html-react-parser";
 import ExternalLinks from "../../_components/ExternalLinks";
 import useGetImages from "../../hooks/useGetImages";
 import Popup from "../../_components/Popup";
-import ArhivePopup from "../ArchivePopup/ArhivePopup";
+import ArhivePopup from "../Archive/ArhivePopup";
+import Stack from "../../_components/Stack";
 
 const RecentItem: FC<{ item: IPet }> = ({ item }) => {
     const { description, externalLinks, id, releaseDate, stack, title } = item;
@@ -23,13 +24,7 @@ const RecentItem: FC<{ item: IPet }> = ({ item }) => {
                 <p className="item-recent__description">
                     {parse(description?.length > 180 ? description.substring(0, 200) + "..." : description)}
                 </p>
-                <ul className="item-recent__stack">
-                    {stack.map((item, i) => (
-                        <li key={item + i} className="item-recent__stack-item">
-                            {item}
-                        </li>
-                    ))}
-                </ul>
+                <Stack className="item-recent__stack" stack={stack} />
                 <div className="item-recent__links">
                     <ExternalLinks className="item-recent__link" link={externalLinks[0].link} id={id} />
                 </div>
