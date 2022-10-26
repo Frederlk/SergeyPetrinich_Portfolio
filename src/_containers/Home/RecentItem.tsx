@@ -1,13 +1,11 @@
 import { format } from "date-fns";
 import { FC, memo, useState } from "react";
-import { IPet } from "../../models/models";
-import { Picture } from "../../_components";
 import parse from "html-react-parser";
-import ExternalLinks from "../../_components/ExternalLinks";
-import useGetImages from "../../hooks/useGetImages";
-import Popup from "../../_components/Popup";
+
+import { IPet } from "../../models/models";
+import { ExternalLinks, Picture, Popup, Stack } from "../../_components";
+import { useGetImages } from "../../hooks";
 import ArhivePopup from "../Archive/ArhivePopup";
-import Stack from "../../_components/Stack";
 
 const RecentItem: FC<{ item: IPet }> = ({ item }) => {
     const { description, externalLinks, id, releaseDate, stack, title } = item;

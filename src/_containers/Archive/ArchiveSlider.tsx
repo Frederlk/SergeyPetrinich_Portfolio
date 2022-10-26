@@ -2,7 +2,7 @@ import { FC, useMemo } from "react";
 import { Swiper, SwiperSlide, SwiperProps } from "swiper/react";
 import { Keyboard, Navigation, Lazy } from "swiper";
 import { Picture } from "../../_components";
-import useGetImages from "../../hooks/useGetImages";
+import { useGetImages } from "../../hooks";
 
 const swiperProps: SwiperProps = {
     modules: [Keyboard, Navigation, Lazy],

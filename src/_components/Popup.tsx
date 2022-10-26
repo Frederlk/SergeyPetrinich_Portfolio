@@ -1,5 +1,4 @@
-import { FC, ReactNode, useEffect, useRef, useState } from "react";
-import { useMount } from "../hooks/useMount";
+import { FC, ReactNode, useEffect, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 import { useAppSelector } from "../hooks/useRedux";
 import useBodyLock from "../store/slices/bodyLock/useBodyLock";
@@ -12,9 +11,6 @@ const Popup: FC<{ className?: string; opened: boolean; onClose: (e?: any) => voi
     children,
 }) => {
     const wrapperRef = useRef<HTMLDivElement | null>(null);
-    // const { mounted } = useMount({ opened });
-
-    // const [animationIn, setAnimationIn] = useState(false);
     const { lockStatus } = useAppSelector((state) => state.bodyLock);
     const { bodyLock, bodyUnlock } = useBodyLock(lockStatus);
 
@@ -30,10 +26,6 @@ const Popup: FC<{ className?: string; opened: boolean; onClose: (e?: any) => voi
             onClose();
         }
     });
-
-    // if (!mounted) {
-    //     return null;
-    // }
 
     return (
         <CSSTransition

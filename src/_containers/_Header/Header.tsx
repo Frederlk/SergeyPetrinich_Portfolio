@@ -1,20 +1,26 @@
 import { FC, useRef } from "react";
 import { useSwipeable } from "react-swipeable";
-
+import { useScrollDirection } from "../../hooks";
 import useMenu from "../../store/slices/menu/useMenu";
 import { Logo } from "../../_components";
 import HeaderLink from "./HeaderLink";
 
 const Header: FC = () => {
-    const ref = useRef(null);
-    const { onToggleMenu, onCloseMenu } = useMenu(ref);
+    const headerRef = useRef(null);
 
+    const { onToggleMenu, onCloseMenu } = useMenu(headerRef);
     const handlers = useSwipeable({
         onSwipedRight: onCloseMenu,
     });
 
+    const [scroll, scrollDirection] = useScrollDirection();
+
     return (
-        <header className="header" data-lp ref={ref}>
+        <header
+            className={`header ${scroll ? "_scroll" : ""} ${scrollDirection === "down" ? "_hide" : "_show"}`}
+            data-lp
+            ref={headerRef}
+        >
             <div className="header__container">
                 <Logo className="header__logo" />
                 <div className="header__menu menu">
