@@ -1,5 +1,6 @@
 import { FC, useCallback } from "react";
 import Top from "../../_components/Top";
+import { useInView } from "react-intersection-observer";
 
 const familiarTechs = [
     "HTML",
@@ -30,10 +31,11 @@ const Skills: FC = () => {
             )),
         [familiarTechs, futureTechs]
     );
+    const { ref, inView, entry } = useInView({ threshold: 0, triggerOnce: true, delay: 500 });
 
     return (
-        <section className="skills">
-            <div className="skills__container">
+        <section className={`skills ${inView ? "_inView" : ""}`}>
+            <div ref={ref} className="skills__container">
                 <Top className="skills__top" title="Skills" />
                 <div className="skills__body">
                     <div className="skills__column">

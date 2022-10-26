@@ -1,11 +1,14 @@
 import { FC } from "react";
 import { Picture } from "../../_components";
 import Top from "../../_components/Top";
+import { useInView } from "react-intersection-observer";
 
 const About: FC = () => {
+    const { ref, inView } = useInView({ threshold: 0, triggerOnce: true, delay: 500 });
+
     return (
-        <section className="about">
-            <div className="about__container">
+        <section className={`about ${inView ? "_inView" : ""}`}>
+            <div ref={ref} className="about__container">
                 <Top className="about__top" title="About me" />
                 <div className="about__body">
                     <div className="about__content">

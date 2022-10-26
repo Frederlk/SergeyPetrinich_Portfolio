@@ -25,14 +25,6 @@
     $result: math.div($px, $current) + em;
     @return $result;
 }
-//Адаптивное свойство
-
-// Grids
-@mixin gridCards($type: fit, $min: 280px, $max: 1fr, $gap: 30px) {
-    display: grid;
-    gap: $gap;
-    grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
-}
 
 // Адаптивное свойство (clamp)
 @mixin adaptiveValue(
@@ -108,13 +100,13 @@
     opacity: 0;
     visibility: hidden;
     @if ($child == true) {
-        ._watcher-view & {
+        ._inView & {
             opacity: 1 !important ;
             visibility: visible !important;
             transform: translate(0, 0) !important;
         }
     } @else {
-        &._watcher-view {
+        &._inView {
             opacity: 1 !important;
             visibility: visible !important;
             transform: translate(0, 0) !important;

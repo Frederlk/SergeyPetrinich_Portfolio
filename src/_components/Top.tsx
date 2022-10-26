@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 
 const Top: FC<{ className?: string; title: string }> = ({ className, title }) => {
     return (
@@ -9,4 +9,4 @@ const Top: FC<{ className?: string; title: string }> = ({ className, title }) =>
     );
 };
 
-export default Top;
+export default memo(Top);

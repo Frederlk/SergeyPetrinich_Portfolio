@@ -11,7 +11,6 @@ const useScrollDirection = () => {
         const scrollY = window.pageYOffset;
         const direction = scrollY > lastScrollY ? "down" : "up";
         if (direction !== scrollDirection && (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10)) {
-            console.log(direction);
             if (document.documentElement.classList.contains("_lock") && direction === "down") {
                 setTimeout(() => {
                     setScrollDirection(direction);

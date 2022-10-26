@@ -66,7 +66,7 @@
 .fullscreen {
     &__label {
         .wrapper-enter & {
-            transform: translate(0px, rem(-30));
+            transform: translate(0px, rem(30));
             opacity: 0;
         }
 
@@ -79,7 +79,7 @@
 
     &__title {
         .wrapper-enter & {
-            transform: translate(0px, rem(-30));
+            transform: translate(0px, rem(30));
             opacity: 0;
         }
 
@@ -92,7 +92,7 @@
 
     &__text {
         .wrapper-enter & {
-            transform: translate(0px, rem(-30));
+            transform: translate(0px, rem(30));
             opacity: 0;
         }
 
@@ -105,7 +105,7 @@
 
     &__btn {
         .wrapper-enter & {
-            transform: translate(0px, rem(-30));
+            transform: translate(0px, rem(30));
             opacity: 0;
         }
 
@@ -164,5 +164,35 @@
         transition: opacity 0.5s ease 0s, visibility 0.5s ease 1s;
         opacity: 0;
         visibility: hidden;
+    }
+}
+
+//========================================================================================================================================================
+
+.about__container,
+.skills__container {
+    @include inViewBasic(0, rem(30), 0.8, 0, true);
+}
+
+.recent {
+    &__top {
+        @include inViewBasic(0, rem(30), 0.8, 0, true);
+    }
+
+    &__item,
+    &__btn-wrap {
+        @include inViewBasic(0, rem(30), 0.8, 0);
+    }
+}
+
+.archive {
+    &__top {
+        @include inViewBasic(0, rem(30), 0.8, 0, true);
+    }
+    &__subtitle {
+        @include inViewBasic(0, rem(30), 0.8, 0.3, true);
+    }
+    &__panel_top {
+        @include inViewBasic(0, rem(30), 0.8, 0.6, true);
     }
 }

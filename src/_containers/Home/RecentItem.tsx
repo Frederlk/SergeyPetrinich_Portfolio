@@ -1,6 +1,7 @@
 import { format } from "date-fns";
 import { FC, memo, useState } from "react";
 import parse from "html-react-parser";
+import { useInView } from "react-intersection-observer";
 
 import { IPet } from "../../models/models";
 import { ExternalLinks, Picture, Popup, Stack } from "../../_components";
@@ -12,8 +13,10 @@ const RecentItem: FC<{ item: IPet }> = ({ item }) => {
     const images = useGetImages({ id, title, one: true });
     const [opened, setOpened] = useState(false);
 
+    const { ref, inView, entry } = useInView({ threshold: 0, triggerOnce: true, delay: 500 });
+
     return (
-        <article className="recent__item item-recent">
+        <article ref={ref} className={`recent__item item-recent ${inView ? "_inView" : ""}`}>
             <div className="item-recent__info">
                 <div className="item-recent__date">{format(new Date(releaseDate * 1000), "MMMM, yyyy")}</div>
                 <h4 onClick={() => setOpened(true)} className="item-recent__title">
