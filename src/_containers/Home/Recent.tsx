@@ -20,7 +20,7 @@ const Recent: FC = () => {
                 <Top className="recent__top" title="Recent Projects" />
                 <div className="recent__body">{sortedPets}</div>
                 <div className="recent__btn-wrap">
-                    <GoTo to="archive" smooth={true} offset={-70} duration={500} className="recent__btn btn">
+                    <GoTo to="archive" smooth={true} duration={500} className="recent__btn btn">
                         More Projects
                     </GoTo>
                 </div>

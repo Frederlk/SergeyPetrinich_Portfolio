@@ -3,7 +3,7 @@ import { Link as GoTo } from "react-scroll";
 
 const Fullscreen: FC = () => {
     return (
-        <div className="fullscreen">
+        <section className="fullscreen">
             <div data-fullscreen="" className="fullscreen__container">
                 <div className="fullscreen__inner">
                     <div className="fullscreen__label">Hello there, my name is</div>
@@ -15,25 +15,13 @@ const Fullscreen: FC = () => {
                         exceptional digital experiences. Currently, I’m focused on building accessible,
                         human-centered products at Upstatement.
                     </p>
-                    <GoTo
-                        to="recent"
-                        smooth={true}
-                        offset={-70}
-                        duration={500}
-                        className="fullscreen__btn btn"
-                    >
+                    <GoTo to="recent" smooth={true} duration={500} className="fullscreen__btn btn">
                         See My Projects
                     </GoTo>
                 </div>
-                <GoTo
-                    to="about"
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                    className="fullscreen__scroll"
-                ></GoTo>
+                <GoTo to="about" smooth={true} duration={500} className="fullscreen__scroll"></GoTo>
             </div>
-        </div>
+        </section>
     );
 };
 

@@ -9,7 +9,6 @@ const Logo: FC<{ className?: string }> = ({ className }) => {
         <GoTo
             to="wrapper"
             smooth={true}
-            offset={-70}
             onSetActive={onCloseMenu}
             duration={500}
             className={`${className || ""} logo _icon-logo`}

@@ -5,7 +5,7 @@
     left: 0;
     z-index: 100;
     box-shadow: 0 rem(10) rem(30) rem(-10) transparent;
-    transition: box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     &::before {
         content: "";
         position: absolute;
@@ -13,27 +13,34 @@
         height: 100%;
         top: 0;
         right: 0;
-        .menu-open & {
-            transition: background-color 0.1s ease 0.8s;
-            right: rem(12);
-            background-color: $c_dark_4;
-        }
+        transition: background-color 0.5s ease 0s, box-shadow 0.5s ease 0s;
+
         @media (max-width: $mobile) {
-            z-index: 5;
+            z-index: 10;
         }
     }
-    &._show {
-        transform: translate(0px, 0px);
-        &._scroll {
+    .menu-open & {
+        &::before {
             box-shadow: 0 rem(10) rem(30) rem(-10) $c_dark_5;
+            background-color: $c_dark_4;
+        }
+    }
+
+    &._show {
+        top: 0;
+        &._scroll {
             &::before {
-                transition: background-color 0.5s ease 0s;
+                box-shadow: 0 rem(10) rem(30) rem(-10) $c_dark_5;
                 background-color: $c_dark_4;
             }
         }
     }
     &._hide {
-        transform: translate(0px, -100%);
+        top: rem(-70);
+        &::before {
+            background-color: $c_dark_4;
+            transition: background-color 0.5s ease 0s;
+        }
     }
     &__container {
         display: flex;
@@ -110,23 +117,22 @@
         }
         @media (max-width: $mobile) {
             position: fixed;
-            width: 80%;
-            height: 100%;
-            top: 0;
+            width: 75%;
+            height: calc(100% - rem(70));
+            top: rem(70);
             left: 100%;
             background-color: $c_dark_4;
             overflow-y: auto;
-            padding: rem(120) rem(15) rem(30) rem(15);
+            padding: rem(50) rem(15) rem(30) rem(15);
             transition: left 0.5s ease-in 0s;
-            z-index: 2;
             @include scrollbars(rem(10), $c_primary, $c_dark_5);
             .menu-open & {
-                left: 20%;
+                left: 25%;
                 transition: left 0.5s ease-out 0.2s;
             }
         }
         @media (max-height: $mobileSmall) and (max-width: $mobile) {
-            padding: rem(90) rem(15) rem(30) rem(15);
+            padding: rem(20) rem(15) rem(30) rem(15);
         }
     }
 
@@ -134,16 +140,15 @@
         @media (max-width: $mobile) {
             content: "";
             position: fixed;
-            width: 80%;
-            height: 100%;
-            top: 0;
+            width: 75%;
+            height: calc(100% - rem(70));
+            top: rem(70);
             left: 100%;
             background-color: $c_primary;
             box-shadow: 0 rem(10) rem(30) rem(-10) transparent;
             transition: left 0.5s ease-in 0.2s;
-            z-index: 1;
             .menu-open & {
-                left: 20%;
+                left: 25%;
                 transition: left 0.5s ease-out 0s;
             }
         }
@@ -194,7 +199,7 @@
         width: rem(35);
         height: rem(25);
         cursor: pointer;
-        z-index: 5;
+        z-index: 15;
         -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
         -webkit-tap-highlight-color: transparent;
         span,

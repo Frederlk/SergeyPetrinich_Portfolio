@@ -212,7 +212,7 @@
     }
 
     &__body {
-        @media (min-width: $tablet) {
+        @media (min-width: $tablet) and (min-height: $mobileSmall) {
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
             gap: rem(40);

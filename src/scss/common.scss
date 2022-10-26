@@ -2,6 +2,7 @@
     display: inline-flex;
     align-items: center;
     gap: rem(7);
+    cursor: pointer;
     &::before {
         color: $c_primary;
         font-size: rem(50);
@@ -52,7 +53,7 @@
     @media (max-width: em(1200)) {
         left: rem(20) !important;
     }
-    @media (min-width: $mobile) {
+    @media (min-width: $mobile) and (min-height: $mobileSmall) {
         flex-direction: column;
         z-index: 10;
         position: fixed;
@@ -66,12 +67,10 @@
             background-color: $c_white;
         }
     }
-    @media (max-width: $mobile) {
+    @media (max-width: $mobile) or (max-height: $mobileSmall) {
         margin-bottom: rem(30);
     }
-    @media (min-width: $mobile) and (max-height: $mobileSmall) {
-        display: none;
-    }
+
     &__item {
         color: $c_white;
         transition: color 0.3s ease 0s, transform 0.3s ease 0s;

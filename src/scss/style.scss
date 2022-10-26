@@ -55,7 +55,9 @@ body {
     @include scrollbars(rem(12), $c_primary, $c_dark_5);
     background-color: $c_dark_4;
     // Скролл заблокирован
-    ._lock & {
+
+    ._lock &,
+    &:has(.wrapper-enter-active) {
         overflow: hidden;
         touch-action: none;
     }
@@ -154,3 +156,6 @@ body {
 
 // Подключение стилей отдельных страниц
 @import "home";
+
+// Подключение анимаций
+@import "animations";

@@ -1,6 +1,6 @@
 import { FC, useMemo } from "react";
 import { firebaseAPI } from "../../services/firebaseAPI";
-import { Spinner, Top } from "../../_components";
+import { Top } from "../../_components";
 import ArchiveItem from "./ArchiveItem";
 
 const Archive: FC = () => {
@@ -25,7 +25,8 @@ const Archive: FC = () => {
                         <div className="archive__stack">Built with</div>
                         <div className="archive__links">Links</div>
                     </div>
-                    {isLoading ? <Spinner /> : arhiveItems}
+                    {arhiveItems}
+                    {/* {isLoading ? <Spinner /> : arhiveItems} */}
                 </div>
             </div>
         </section>

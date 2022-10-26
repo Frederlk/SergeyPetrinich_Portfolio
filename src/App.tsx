@@ -1,20 +1,20 @@
-import { FC, useEffect } from "react";
+import { FC, useRef, useState } from "react";
 
-import { useEffectOnce, useEventListener } from "./hooks";
+import { useEffectOnce } from "./hooks";
 import { About, Archive, Footer, Fullscreen, Header, Recent, Skills } from "./_containers";
-import { spollers } from "./helpers/functions";
 import dynamicAdaptive from "./helpers/dynamic_adapt";
+import { CSSTransition } from "react-transition-group";
+import { Spinner } from "./_components";
 
 const App: FC = () => {
-    useEffect(() => {
-        dynamicAdaptive();
-        spollers();
-        window.scrollTo(0, 0);
-    }, []);
+    const [mounted, setMounted] = useState(false);
 
     useEffectOnce(() => {
+        dynamicAdaptive();
+
         const onPageLoad = () => {
             document.documentElement.classList.add("_loaded");
+            setMounted(true);
         };
 
         // Check if the page has already loaded
@@ -27,18 +27,30 @@ const App: FC = () => {
         }
     });
 
+    const wrapperRef = useRef<HTMLDivElement | null>(null);
+
     return (
-        <>
-            <Header />
-            <main className="page">
-                <Fullscreen />
-                <About />
-                <Skills />
-                <Recent />
-                <Archive />
-            </main>
-            <Footer />
-        </>
+        <CSSTransition
+            nodeRef={wrapperRef}
+            mountOnEnter
+            unmountOnExit
+            timeout={1000}
+            classNames={"wrapper"}
+            in={mounted}
+        >
+            <div ref={wrapperRef} className="wrapper">
+                <Header />
+                <main className="page">
+                    <Fullscreen />
+                    <About />
+                    <Skills />
+                    <Recent />
+                    <Archive />
+                </main>
+                <Footer />
+                <Spinner />
+            </div>
+        </CSSTransition>
     );
 };
 
