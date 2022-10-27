@@ -47,7 +47,7 @@
         ]
     },
     {
-        "id": "PET_GAO",
+        "id": "PET_REACT_GAO",
         "title": "GAO",
         "description": "A fully responsive step by step registration form with complete validation. Using different types of inputs and uploading profile image to Firebase Storage.",
         "releaseDate": 	1665406002,
@@ -113,7 +113,7 @@
         ]
     },
     {
-        "id": "PET_Gericht",
+        "id": "PET_REACT_GERICHT",
         "title": "Gericht",
         "description": "A fully responsive Modern UI/UX Restaurant Landing Page Website. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
         "releaseDate": 	1650982749,
@@ -126,7 +126,7 @@
         ]
     },
     {
-        "id": "PET_Mozy",
+        "id": "PET_REACT_MOZY",
         "title": "Mozy",
         "description": "A fully responsive Modern UI/UX services Website. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
         "releaseDate": 	1651846749,
@@ -165,6 +165,97 @@
                 "link": "https://pet-business-ui.web.app/",
                 "title": "Home Page"
             }
+        ]
+    },
+    {
+        "id": "PET_AOD",
+        "title": "AOD",
+        "description": "A fully responsive Bike company Landing. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1617642199,
+        "stack": ["JavaScript", "SCSS", "HTML", "Swiper", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "https://pet-aod.web.app/",
+                "title": "Home Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_BINARY",
+        "title": "Binary",
+        "description": "A fully responsive Design Services landing page. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1617728599,
+        "stack": ["JavaScript", "SCSS", "HTML", "LightGallery", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "https://pet-binary.web.app/",
+                "title": "Home Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_REACT_LUXTRADER",
+        "title": "Luxtrader",
+        "description": "A fully responsive Luxury Auction Landing Page Website. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1653066199,
+        "stack": ["React", "SCSS", "Swiper", "Vercel", "Date-fns"],
+        "externalLinks": [
+            {
+                "link": "https://pet-react-luxtrader.vercel.app/",
+                "title": "Home Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_REACT_LOGO",
+        "title": "LOGO",
+        "description": "A fully responsive sport webcommerce site. Home, Catalog, Product and Cart pages. I tried to cover functional as much as I could, implementing sliders, filters, pagination, form validation. You are able to add different products to cart, change your order size and see a final price.",
+        "releaseDate": 	1655139799,
+        "stack": ["React", "SCSS","formik", "date-fns", "react-paginate", "react-router-dom"],
+        "externalLinks": [
+            {
+                "link": "https://pet-react-logo.vercel.app/",
+                "title": "Home Page"
+            },
+            {
+                "link": "https://pet-react-logo.vercel.app/catalog",
+                "title": "Catalog Page"
+            },
+            {
+                "link": "https://pet-react-logo.vercel.app/catalog/aab5d2d6-51769-4f79-9baa-2469d676321f",
+                "title": "Product Page"
+            },
+            {
+                "link": "https://pet-react-logo.vercel.app/cart",
+                "title": "Cart Page"
+            }
+          
+        ]
+    },
+    {
+        "id": "PET_REACT_JOHN",
+        "title": "John",
+        "description": "A fully responsive small personal portfolio website with routing and modern UI/UX.",
+        "releaseDate": 	1656608599,
+        "stack": ["React", "SCSS", "react-router-dom", "Vercel", "Figma"],
+        "externalLinks": [
+            {
+                "link": "https://pet-react-john.vercel.app/",
+                "title": "Home Page"
+            },
+            {
+                "link": "https://pet-react-john.vercel.app/works",
+                "title": "Works Page"
+            },
+            {
+                "link": "https://pet-react-john.vercel.app/works/Designing-Dashboards",
+                "title": "Work Item Page"
+            },
+            {
+                "link": "https://pet-react-john.vercel.app/blog",
+                "title": "Blog Page"
+            }
+            
         ]
     }
 ]

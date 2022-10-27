@@ -4,6 +4,8 @@ import ReactPaginate from "react-paginate";
 import { CSSTransition } from "react-transition-group";
 import { IPet } from "../../models/models";
 
+import { scroller } from "react-scroll";
+
 import { firebaseAPI } from "../../services/firebaseAPI";
 import { Top } from "../../_components";
 import ArchiveItem from "./ArchiveItem";
@@ -13,6 +15,7 @@ const Archive: FC = () => {
     const { data: pets, isLoading } = firebaseAPI.useGetPetsQuery("PET");
     const { ref, inView } = useInView({ threshold: 0, triggerOnce: true, delay: 500 });
     const listRef = useRef<HTMLUListElement | null>(null);
+    const archiveRef = useRef<HTMLElement | null>(null);
     const [updateAnimation, setUpdateAnimation] = useState(false);
 
     // We start with an empty list of items.
@@ -37,11 +40,13 @@ const Archive: FC = () => {
     const handlePageClick = (event: any) => {
         if (pets) {
             updateAnimation && setUpdateAnimation(false);
+            // listRef.current && window.scrollTo(0, listRef.current.offsetTop);
+            scroller.scrollTo("archive", { smooth: true, duration: 500, offset: -50 });
             setTimeout(() => {
                 const newOffset = (event.selected * itemsPerPage) % pets.length;
                 setItemOffset(newOffset);
                 setUpdateAnimation(true);
-            }, 500);
+            }, currentItems.length * 100);
         }
     };
 
@@ -51,7 +56,7 @@ const Archive: FC = () => {
     );
 
     return (
-        <section className={`archive ${inView ? "_inView" : ""}`}>
+        <section ref={archiveRef} className={`archive ${inView ? "_inView" : ""}`}>
             <div ref={ref} className="archive__container">
                 <Top title="Archive" className="archive__top" />
                 <h3 className="archive__subtitle">
@@ -59,9 +64,11 @@ const Archive: FC = () => {
                 </h3>
                 <div className="archive__body">
                     <div className="archive__panel archive__panel_top">
-                        <div className="archive__date">Date</div>
-                        <div className="archive__title">Title</div>
-                        <div className="archive__stack">Built with</div>
+                        <div className="archive__wrap">
+                            <div className="archive__date">Date</div>
+                            <div className="archive__title">Title</div>
+                            <div className="archive__stack">Built with</div>
+                        </div>
                         <div className="archive__links">Links</div>
                     </div>
 
@@ -71,7 +78,7 @@ const Archive: FC = () => {
                         <>
                             <CSSTransition
                                 nodeRef={listRef}
-                                timeout={500}
+                                timeout={currentItems.length * 100}
                                 classNames={"list"}
                                 in={updateAnimation}
                             >

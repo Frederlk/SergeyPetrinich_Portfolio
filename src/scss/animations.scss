@@ -234,7 +234,8 @@
     }
     @for $i from 1 through 10 {
         .archive__panel_item:nth-of-type(#{$i}) {
-            transition: all 0.5s ease (($i - 1) * 0.1s);
+            transition: opacity 0.3s ease (($i - 1) * 0.1s), transform 0.3s ease (($i - 1) * 0.1s),
+                background-color 0.3s ease 0s;
         }
     }
 }
@@ -251,7 +252,8 @@
     }
     @for $i from 1 through 10 {
         .archive__panel_item:nth-of-type(#{$i}) {
-            transition: all 0.5s ease (($i - 1) * 0.1s);
+            transition: opacity 0.3s ease (($i - 1) * 0.1s), transform 0.3s ease (($i - 1) * 0.1s),
+                background-color 0.3s ease 0s;
         }
     }
 }
