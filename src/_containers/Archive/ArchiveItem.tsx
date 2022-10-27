@@ -12,7 +12,7 @@ const ArchiveItem: FC<{ pet: IPet }> = ({ pet }) => {
         <>
             <li className="archive__panel archive__panel_item">
                 <div tabIndex={0} onClick={() => setOpened(true)} className="archive__wrap">
-                    <div className="archive__date">{format(new Date(releaseDate * 1000), "MMMM yyyy")}</div>
+                    <div className="archive__date">{format(new Date(releaseDate * 1000), "MMM, yyyy")}</div>
                     <h4 className="archive__title">{title}</h4>
                     <Stack className="archive__stack" stack={stack} />
                 </div>

@@ -1,6 +1,5 @@
 import { FC, useMemo } from "react";
 import { format } from "date-fns";
-import parse from "html-react-parser";
 
 import { IPet } from "../../models/models";
 import { Links } from "../../constants/links";
@@ -37,7 +36,7 @@ const ArhivePopup: FC<{ pet: IPet }> = ({ pet }) => {
                         className="_icon-github"
                     ></a>
                 </h2>
-                <div className="archive-popup__description">{parse(description)}</div>
+                <div className="archive-popup__description">{description}</div>
                 <h3 className="archive-popup__subtitle">Stack</h3>
                 <Stack className="archive-popup__stack" stack={stack} />
                 <h3 className="archive-popup__subtitle">External Links</h3>

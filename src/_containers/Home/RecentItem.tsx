@@ -1,6 +1,5 @@
 import { format } from "date-fns";
 import { FC, memo, useState } from "react";
-import parse from "html-react-parser";
 import { useInView } from "react-intersection-observer";
 
 import { IPet } from "../../models/models";
@@ -23,9 +22,9 @@ const RecentItem: FC<{ item: IPet }> = ({ item }) => {
                     <span>{title}</span>
                 </h4>
                 <p className="item-recent__description">
-                    {parse(description?.length > 180 ? description.substring(0, 200) + "..." : description)}
+                    {description?.length > 180 ? description.substring(0, 200) + "..." : description}
                 </p>
-                <Stack className="item-recent__stack" stack={stack} />
+                <Stack className="item-recent__stack" stack={stack} limit={5} />
                 <div className="item-recent__links">
                     <ExternalLinks className="item-recent__link" link={externalLinks[0].link} id={id} />
                 </div>

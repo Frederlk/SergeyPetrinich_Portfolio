@@ -16,7 +16,7 @@ const Archive: FC = () => {
     const [updateAnimation, setUpdateAnimation] = useState(false);
 
     // We start with an empty list of items.
-    const itemsPerPage = 2;
+    const itemsPerPage = 10;
     const [currentItems, setCurrentItems] = useState<IPet[]>([]);
     const [pageCount, setPageCount] = useState(0);
     // Here we use item offsets; we could also use page offsets
@@ -79,7 +79,7 @@ const Archive: FC = () => {
                                     {arhiveItems}
                                 </ul>
                             </CSSTransition>
-                            {pageCount >= 1 && (
+                            {pageCount > 1 && (
                                 <ReactPaginate
                                     className="archive__pagination"
                                     breakLabel="..."
