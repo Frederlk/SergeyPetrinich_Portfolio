@@ -30,8 +30,13 @@ const ArchiveSlider: FC<{ id: string; title: string }> = ({ id, title }) => {
     const slides = useMemo(
         () =>
             images.map(({ alt, img, webp }, i) => (
-                <SwiperSlide key={i} className="archive-popup__image-ibg">
-                    <Picture srcWebp={webp} fallbackSrc={img} alt={alt} />
+                <SwiperSlide key={i} className="archive-popup__slide">
+                    <div className="archive-popup__background-ibg">
+                        <Picture srcWebp={webp} fallbackSrc={img} alt={alt} />
+                    </div>
+                    <div className="archive-popup__image">
+                        <Picture srcWebp={webp} fallbackSrc={img} alt={alt} />
+                    </div>
                 </SwiperSlide>
             )),
         [images]

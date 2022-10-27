@@ -18,6 +18,9 @@
     }
 }
 
+._icon-close:before {
+    content: "\e90e";
+}
 ._icon-phone:before {
     content: "\e900";
 }

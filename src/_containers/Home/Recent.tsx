@@ -24,7 +24,7 @@ const Recent: FC = () => {
                 <Top className="recent__top" title="Recent Projects" />
                 <div className="recent__body">{sortedPets}</div>
                 <div ref={btnRef} className={`recent__btn-wrap ${inViewBtn ? "_inView" : ""}`}>
-                    <GoTo to="archive" smooth={true} duration={500} className="recent__btn btn">
+                    <GoTo tabIndex={0} to="archive" smooth={true} duration={500} className="recent__btn btn">
                         More Projects
                     </GoTo>
                 </div>

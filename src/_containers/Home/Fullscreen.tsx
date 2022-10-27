@@ -15,11 +15,24 @@ const Fullscreen: FC = () => {
                         exceptional digital experiences. Currently, I’m focused on building accessible,
                         human-centered products at Upstatement.
                     </p>
-                    <GoTo to="recent" smooth={true} duration={500} className="fullscreen__btn btn">
+
+                    <GoTo
+                        tabIndex={0}
+                        to="recent"
+                        smooth={true}
+                        duration={500}
+                        className="fullscreen__btn btn"
+                    >
                         See My Projects
                     </GoTo>
                 </div>
-                <GoTo to="about" smooth={true} duration={500} className="fullscreen__scroll"></GoTo>
+                <GoTo
+                    tabIndex={0}
+                    to="about"
+                    smooth={true}
+                    duration={500}
+                    className="fullscreen__scroll"
+                ></GoTo>
             </div>
         </section>
     );

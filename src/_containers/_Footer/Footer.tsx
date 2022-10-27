@@ -44,7 +44,13 @@ const Footer: FC = () => {
                     <div className="footer__copy">
                         <span>© 2022</span> Sergey Petrinich
                     </div>
-                    <GoTo to="wrapper" smooth={true} duration={500} className="footer__totop _icon-arrow">
+                    <GoTo
+                        tabIndex={0}
+                        to="wrapper"
+                        smooth={true}
+                        duration={500}
+                        className="footer__totop _icon-arrow"
+                    >
                         <span>To top</span>
                     </GoTo>
                 </div>

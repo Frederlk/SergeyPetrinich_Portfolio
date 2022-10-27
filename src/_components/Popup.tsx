@@ -39,8 +39,8 @@ const Popup: FC<{ className?: string; opened: boolean; onClose: (e?: any) => voi
             <div ref={wrapperRef} className={`${className || ""} popup`}>
                 <div className="popup__wrapper" onClick={onClose}></div>
                 <div className="popup__content">
-                    <button type="button" onClick={onClose} className="popup__close">
-                        ✖
+                    <button type="button" onClick={onClose} className="popup__close _icon-close">
+                        <span>Close</span>
                     </button>
                     {children}
                 </div>

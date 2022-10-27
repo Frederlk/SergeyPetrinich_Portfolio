@@ -181,7 +181,16 @@
 
     &__item,
     &__btn-wrap {
-        @include inViewBasic(0, rem(30), 0.8, 0);
+        opacity: 0;
+        visibility: hidden;
+        position: relative;
+        top: rem(30);
+        transition: opacity 0.8s ease 0s, visibility 0.8s ease 0s, top 0.8s ease 0s;
+        &._inView {
+            opacity: 1;
+            visibility: visible;
+            top: 0;
+        }
     }
 }
 
@@ -192,7 +201,59 @@
     &__subtitle {
         @include inViewBasic(0, rem(30), 0.8, 0.3, true);
     }
-    &__panel_top {
-        @include inViewBasic(0, rem(30), 0.8, 0.6, true);
+    &__body {
+        opacity: 0;
+        visibility: hidden;
+        position: relative;
+        top: rem(30);
+        transition: opacity 0.8s ease 0.6s, visibility 0.8s ease 0.6s, top 0.8s ease 0.6s;
+        ._inView & {
+            opacity: 1;
+            visibility: visible;
+            top: 0;
+        }
+    }
+    &__pagination {
+        @include inViewBasic(0, rem(30), 0.8, 0.9, true);
     }
 }
+
+//========================================================================================================================================================
+
+.list-enter {
+    .archive__panel_item {
+        opacity: 0;
+        transform: translate(0px, rem(30));
+    }
+}
+
+.list-enter-done {
+    .archive__panel_item {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+    @for $i from 1 through 10 {
+        .archive__panel_item:nth-of-type(#{$i}) {
+            transition: all 0.5s ease (($i - 1) * 0.1s);
+        }
+    }
+}
+
+.list-exit {
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
+
+.list-exit-active {
+    .archive__panel_item {
+        opacity: 0;
+        transform: translate(0px, rem(30));
+    }
+    @for $i from 1 through 10 {
+        .archive__panel_item:nth-of-type(#{$i}) {
+            transition: all 0.5s ease (($i - 1) * 0.1s);
+        }
+    }
+}
+
+//========================================================================================================================================================

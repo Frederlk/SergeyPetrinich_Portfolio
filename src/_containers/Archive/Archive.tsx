@@ -1,6 +1,7 @@
-import { FC, useMemo, useState, useEffect } from "react";
+import { FC, useMemo, useState, useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import ReactPaginate from "react-paginate";
+import { CSSTransition } from "react-transition-group";
 import { IPet } from "../../models/models";
 
 import { firebaseAPI } from "../../services/firebaseAPI";
@@ -9,8 +10,10 @@ import ArchiveItem from "./ArchiveItem";
 import ArchiveSkeleton from "./ArchiveSkeleton";
 
 const Archive: FC = () => {
-    const { data: pets, error, isLoading } = firebaseAPI.useGetPetsQuery("PET");
+    const { data: pets, isLoading } = firebaseAPI.useGetPetsQuery("PET");
     const { ref, inView } = useInView({ threshold: 0, triggerOnce: true, delay: 500 });
+    const listRef = useRef<HTMLUListElement | null>(null);
+    const [updateAnimation, setUpdateAnimation] = useState(false);
 
     // We start with an empty list of items.
     const itemsPerPage = 2;
@@ -26,14 +29,19 @@ const Archive: FC = () => {
             const endOffset = itemOffset + itemsPerPage;
             setCurrentItems(pets.slice(itemOffset, endOffset));
             setPageCount(Math.ceil(pets.length / itemsPerPage));
+            setUpdateAnimation(true);
         }
     }, [itemOffset, itemsPerPage, pets]);
 
     // Invoke when user click to request another page.
     const handlePageClick = (event: any) => {
         if (pets) {
-            const newOffset = (event.selected * itemsPerPage) % pets.length;
-            setItemOffset(newOffset);
+            updateAnimation && setUpdateAnimation(false);
+            setTimeout(() => {
+                const newOffset = (event.selected * itemsPerPage) % pets.length;
+                setItemOffset(newOffset);
+                setUpdateAnimation(true);
+            }, 500);
         }
     };
 
@@ -56,11 +64,21 @@ const Archive: FC = () => {
                         <div className="archive__stack">Built with</div>
                         <div className="archive__links">Links</div>
                     </div>
+
                     {isLoading ? (
                         <ArchiveSkeleton />
                     ) : (
                         <>
-                            {arhiveItems}
+                            <CSSTransition
+                                nodeRef={listRef}
+                                timeout={500}
+                                classNames={"list"}
+                                in={updateAnimation}
+                            >
+                                <ul ref={listRef} className="archive__list">
+                                    {arhiveItems}
+                                </ul>
+                            </CSSTransition>
                             {pageCount >= 1 && (
                                 <ReactPaginate
                                     className="archive__pagination"

@@ -11,6 +11,7 @@ const Logo: FC<{ className?: string }> = ({ className }) => {
             smooth={true}
             onSetActive={onCloseMenu}
             duration={500}
+            tabIndex={0}
             className={`${className || ""} logo _icon-logo`}
         >
             <div className="logo__text">
