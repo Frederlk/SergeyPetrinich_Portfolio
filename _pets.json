@@ -257,5 +257,117 @@
             }
             
         ]
+    },
+    {
+        "id": "PET_LaslesVPN",
+        "title": "LaslesVPN",
+        "description": "A fully responsive VPN services landing. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1617009676,
+        "stack": ["JavaScript", "SCSS", "HTML", "Swiper", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "https://pet-lasles.web.app/",
+                "title": "Home Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_RealEstate",
+        "title": "RealEstate",
+        "description": "A fully responsive Real Estate services landing. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1619601676,
+        "stack": ["JavaScript", "SCSS", "HTML", "Swiper", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "https://pet-realestate.web.app/",
+                "title": "Home Page"
+            },
+            {
+                "link": "https://pet-realestate.web.app/product.html",
+                "title": "Product Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_Cappadocia",
+        "title": "Cappadocia",
+        "description": "A fully responsive Travel Tour landing. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1620638476,
+        "stack": ["JavaScript", "SCSS", "HTML", "Swiper", "LightGallery", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "https://pet-cappadochia.web.app/",
+                "title": "Home Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_MartaUp",
+        "title": "MartaUp",
+        "description": "A fully responsive Web services landing. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1620724876,
+        "stack": ["JavaScript", "SCSS", "HTML", "Swiper", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "https://pet-marta.web.app/",
+                "title": "Home Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_Tesla",
+        "title": "Tesla",
+        "description": "A fully responsive Tesla landing. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1620897676,
+        "stack": ["JavaScript", "SCSS", "HTML", "Swiper","count-up", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "https://pet-tesla.firebaseapp.com/",
+                "title": "Home Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_DiGi",
+        "title": "DiGi",
+        "description": "A fully responsive Digital Agency landing. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1621502476,
+        "stack": ["JavaScript", "SCSS", "HTML", "Swiper","Masonry", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "https://pet-digi.firebaseapp.com/",
+                "title": "Home Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_REACT_Desire",
+        "title": "Desire",
+        "description": "A fully responsive Furniture Webcommerce site. Routing between Home,About, Gallery, Blog, Single Blog  and Contacts pages. Sliders, filters, galleries, pagination. Ability to leave comments and reply to them. All forms are made with Formik and validatable by Yup.",
+        "releaseDate": 	1659000076,
+        "stack": ["React", "SCSS", "Formik", "LightGallery", "Swiper", "react-router-dom","react-paginate"],
+        "externalLinks": [
+            {
+                "link": "https://pet-react-desire.vercel.app/",
+                "title": "Home Page"
+            },
+            {
+                "link": "https://pet-react-desire.vercel.app/about",
+                "title": "About Page"
+            },
+            {
+                "link": "https://pet-react-desire.vercel.app/gallery",
+                "title": "Gallery Page"
+            },
+            {
+                "link": "https://pet-react-desire.vercel.app/blog",
+                "title": "Blog Page"
+            },
+            {
+                "link": "https://pet-react-desire.vercel.app/contact",
+                "title": "Contacts Page"
+            }
+          
+        ]
     }
 ]

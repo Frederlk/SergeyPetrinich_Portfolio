@@ -531,6 +531,9 @@
         @media (max-width: $mobile) {
             min-height: rem(50);
         }
+        @media (max-width: $mobileSmall) {
+            gap: rem(10);
+        }
     }
 
     &__date {
@@ -547,9 +550,12 @@
         @media (max-width: em(850)) {
             flex: 0 0 rem(60);
         }
-        // @media (max-width: em(400)) {
-        //     display: none;
-        // }
+        @media (max-width: $mobile) {
+            flex: 0 0 rem(120);
+        }
+        @media (max-width: $mobileSmall) {
+            flex: 0 0 rem(60);
+        }
     }
 
     &__title {
