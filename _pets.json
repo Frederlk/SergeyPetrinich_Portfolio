@@ -369,5 +369,113 @@
             }
           
         ]
+    },
+    {
+        "id": "PET_Alivio",
+        "title": "Alivio",
+        "description": "A fully responsive Stress Management landing page. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1626093609,
+        "stack": ["JavaScript", "SCSS", "HTML", "Animations", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "https://pet-alivio.firebaseapp.com",
+                "title": "Home Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_Gravity",
+        "title": "Gravity",
+        "description": "A fully responsive Design Services landing page and Blog page. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1625661609,
+        "stack": ["JavaScript", "SCSS", "HTML", "Swiper", "Popup", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "https://pet-gravity.web.app/",
+                "title": "Home Page"
+            },
+            {
+                "link": "https://pet-gravity.web.app/blog.html",
+                "title": "Blog Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_Traffico",
+        "title": "Traffico",
+        "description": "A fully responsive Traffic Consultant landing page. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1623415209,
+        "stack": ["JavaScript", "SCSS", "HTML", "Swiper", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "https://pet-traffico.firebaseapp.com/",
+                "title": "Home Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_Kuba",
+        "title": "Kuba",
+        "description": "A fully responsive landing page of Cuba. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1625056809,
+        "stack": ["JavaScript", "SCSS", "HTML", "count-up", "Swiper", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "https://pet-cuba.firebaseapp.com/",
+                "title": "Home Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_To2rent",
+        "title": "To2rent",
+        "description": "A fully responsive Rent landing page. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1625143209,
+        "stack": ["JavaScript", "SCSS", "HTML", "Swiper", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "https://pet-to2rent.firebaseapp.com/",
+                "title": "Home Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_GiftShop",
+        "title": "GiftShop",
+        "description": "A fully responsive landing page of Gift Shop. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1625488809,
+        "stack": ["JavaScript", "SCSS", "HTML", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "https://pet-giftstore.firebaseapp.com/",
+                "title": "Home Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_FashionBlog",
+        "title": "FashionBlog",
+        "description": "A fully responsive page of Fashion Blog. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1626784809,
+        "stack": ["JavaScript", "SCSS", "HTML", "LightGallery", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "https://pet-fashionblog.firebaseapp.com/",
+                "title": "Home Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_Woodies",
+        "title": "Woodies",
+        "description": "A fully responsive landing page of Furniture Shop. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1626957609,
+        "stack": ["JavaScript", "SCSS", "HTML", "Swiper", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "https://pet-woodies.firebaseapp.com/",
+                "title": "Home Page"
+            }
+        ]
     }
 ]
