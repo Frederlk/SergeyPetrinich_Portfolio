@@ -214,6 +214,24 @@
         @extend %text_3;
         color: $c_dark_3;
         margin-bottom: rem(20);
+        p {
+            &:not(:last-child) {
+                margin-bottom: rem(10);
+            }
+        }
+        ul {
+            margin-top: rem(-10);
+            padding-left: rem(10);
+            li {
+                display: flex;
+                align-items: center;
+                gap: rem(5);
+                color: $c_dark_4;
+                span {
+                    color: $c_primary;
+                }
+            }
+        }
     }
 
     &__subtitle {

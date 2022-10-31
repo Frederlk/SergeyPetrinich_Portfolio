@@ -36,7 +36,12 @@ const ArhivePopup: FC<{ pet: IPet }> = ({ pet }) => {
                         className="_icon-github"
                     ></a>
                 </h2>
-                <div className="archive-popup__description">{description}</div>
+                <div
+                    className="archive-popup__description"
+                    dangerouslySetInnerHTML={{
+                        __html: description,
+                    }}
+                ></div>
                 <h3 className="archive-popup__subtitle">Stack</h3>
                 <Stack className="archive-popup__stack" stack={stack} />
                 <h3 className="archive-popup__subtitle">External Links</h3>

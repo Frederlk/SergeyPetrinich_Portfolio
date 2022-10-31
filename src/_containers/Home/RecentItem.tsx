@@ -1,7 +1,6 @@
 import { format } from "date-fns";
 import { FC, memo, useState } from "react";
 import { useInView } from "react-intersection-observer";
-
 import { IPet } from "../../models/models";
 import { ExternalLinks, Picture, Popup, Stack } from "../../_components";
 import { useGetImages } from "../../hooks";
@@ -21,9 +20,13 @@ const RecentItem: FC<{ item: IPet }> = ({ item }) => {
                 <h4 tabIndex={0} onClick={() => setOpened(true)} className="item-recent__title">
                     <span>{title}</span>
                 </h4>
-                <p className="item-recent__description">
-                    {description?.length > 180 ? description.substring(0, 200) + "..." : description}
-                </p>
+                <div
+                    className="item-recent__description"
+                    dangerouslySetInnerHTML={{
+                        __html:
+                            description?.length > 180 ? description.substring(0, 200) + "..." : description,
+                    }}
+                ></div>
                 <Stack className="item-recent__stack" stack={stack} limit={5} />
                 <div className="item-recent__links">
                     <ExternalLinks className="item-recent__link" link={externalLinks[0].link} id={id} />

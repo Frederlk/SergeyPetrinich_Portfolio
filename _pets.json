@@ -477,5 +477,243 @@
                 "title": "Home Page"
             }
         ]
+    },
+    {
+        "id": "PET_CloudBudget",
+        "title": "CloudBudget",
+        "description": "A fully responsive landing page of CloudBudget Service. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1625922976,
+        "stack": ["JavaScript", "SCSS", "HTML", "Swiper", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "https://pet-cloudbudget.firebaseapp.com/",
+                "title": "Home Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_HotelPage",
+        "title": "HotelPage",
+        "description": "A fully responsive and animated page of Hotel website. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1627291170,
+        "stack": ["JavaScript", "SCSS", "HTML", "Swiper", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "https://pet-hotelpage.firebaseapp.com/",
+                "title": "Home Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_GoSurf",
+        "title": "GoSurf",
+        "description": "A fully responsive and animated Surfing landing page. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1628068770,
+        "stack": ["JQuery", "SCSS", "HTML", "Slick", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "https://pet-gosurf.firebaseapp.com/",
+                "title": "Home Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_Travel",
+        "title": "Travel",
+        "description": "A fully responsive and animated page of Travel landing. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1628587170,
+        "stack": ["JavaScript", "SCSS", "HTML", "Swiper", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "https://pet-travel-frederlk.firebaseapp.com/",
+                "title": "Home Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_Mavic",
+        "title": "Mavic",
+        "description": "A fully responsive and animated page of Mavic Drone landing. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1629019170,
+        "stack": ["JavaScript", "SCSS", "HTML", "Swiper", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "https://pet-mavic.firebaseapp.com/",
+                "title": "Home Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_Horizon",
+        "title": "Horizon",
+        "description": "A fully responsive and animated landing page of Horizon: Forbidden West. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1629451170,
+        "stack": ["JavaScript", "SCSS", "HTML", "Swiper", "Gulp", "Webpack"],
+        "externalLinks": [
+            {
+                "link": "https://pet-horizon-frderlk.firebaseapp.com/",
+                "title": "Home Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_WooCommerce",
+        "title": "WooCommerce",
+        "description": "A fully responsive and animated landing page of eCommerce Platform. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1629883170,
+        "stack": ["JavaScript", "SCSS", "HTML", "Swiper", "Gulp", "Webpack", "Parallax"],
+        "externalLinks": [
+            {
+                "link": "https://pet-woocommerce.firebaseapp.com/",
+                "title": "Home Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_Funiro",
+        "title": "Funiro",
+        "description": "A fully responsive landing page of Furniture Shop. All elements of the user interaction with the site are animated and create a pleasant feeling of “high cost” when viewing the site, which also positively affects the attitude of potential customers to the company.",
+        "releaseDate": 	1630315170,
+        "stack": ["JavaScript", "SCSS", "HTML", "Swiper", "LightGallery", "Gulp", "Webpack" ],
+        "externalLinks": [
+            {
+                "link": "https://pet-funiro.firebaseapp.com/",
+                "title": "Home Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_REACT_Chat_1",
+        "title": "Chat APP",
+        "description": "A small Chat APP built with Firebase, using Firestore and Google Authentication",
+        "releaseDate": 	1661851170,
+        "stack": ["React","Firebase", "SCSS" ],
+        "externalLinks": [
+            {
+                "link": "https://pet-react-chat-1.web.app/",
+                "title": "Login Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_REACT_Chat_1",
+        "title": "Chat APP",
+        "description": "A small Chat APP built with Firebase, using Firestore and Google Authentication",
+        "releaseDate": 	1661851170,
+        "stack": ["React","Firebase", "SCSS" ],
+        "externalLinks": [
+            {
+                "link": "https://pet-react-chat-1.web.app/",
+                "title": "Login Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_REACT_OFDR",
+        "title": "OFDR",
+        "description": "A fully responsive pages of OFDR: Center for professional remote retraining of personnel. Routing between Home, Attestation, News, and Contacts pages. All forms are made with Formik and validatable by Yup.",
+        "releaseDate": 	1649927970,
+        "stack": ["React", "SCSS", "Swiper", "Formik", "Yup", "react-router-dom", "react-paginate"],
+        "externalLinks": [
+            {
+                "link": "https://pet-react-ofdr.vercel.app/",
+                "title": "Home Page"
+            },
+            {
+                "link": "https://pet-react-ofdr.vercel.app/attestations/electric",
+                "title": "Attestation Page"
+            },
+            {
+                "link": "https://pet-react-ofdr.vercel.app/news",
+                "title": "News Page"
+            },
+            {
+                "link": "https://pet-react-ofdr.vercel.app/contacts",
+                "title": "Contacts Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_REACT_CoffeeHouse",
+        "title": "Coffee House",
+        "description": "A fully responsive Coffee Shop app. Routing between Home, Our, Pleasure and Product pages. Ability to search and filter products",
+        "releaseDate": 	1648545570,
+        "stack": ["React", "SCSS", "react-parallax", "react-router-dom"],
+        "externalLinks": [
+            {
+                "link": "https://pet-react-coffeeshop.vercel.app/",
+                "title": "Home Page"
+            },
+            {
+                "link": "https://pet-react-coffeeshop.vercel.app/our",
+                "title": "Our Page"
+            },
+            {
+                "link": "https://pet-react-coffeeshop.vercel.app/pleasure",
+                "title": "Pleasure Page"
+            },
+            {
+                "link": "https://pet-react-coffeeshop.vercel.app/coffee/4",
+                "title": "Product Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_REACT_Lopper",
+        "title": "Lopper",
+        "description": "A fully responsive Business Services website. Routing between Home, Services, Work, About, Gallery and Contacts pages. Sliders, Gallery, Spollers. All forms are made with Formik and validatable by Yup.",
+        "releaseDate": 	1663319970,
+        "stack": ["React", "TypeScript", "SCSS", "Redux","Formik","Swiper","LightGallery", "react-router-dom"],
+        "externalLinks": [
+            {
+                "link": "https://pet-react-lopper.vercel.app/",
+                "title": "Home Page"
+            },
+            {
+                "link": "https://pet-react-lopper.vercel.app/services",
+                "title": "Services Page"
+            },
+            {
+                "link": "https://pet-react-lopper.vercel.app/work",
+                "title": "Work Page"
+            },
+            {
+                "link": "https://pet-react-lopper.vercel.app/about",
+                "title": "About Page"
+            },
+            {
+                "link": "https://pet-react-lopper.vercel.app/gallery",
+                "title": "Gallery Page"
+            },
+            {
+                "link": "https://pet-react-lopper.vercel.app/contacts",
+                "title": "Contacts Page"
+            }
+        ]
+    },
+    {
+        "id": "PET_REACT_DugiLan",
+        "title": "DugiLan",
+        "description": "<p>A fully responsive Wordpress Themes shop website.</p><p>Users can view themes, add them to favorites and shopping cart, select quantity andadditional services. In the shopping cart, user can enter a discount coupon,<ul><li>coupon1</li><li> coupon2</li></ul>change the address and checkout.</p><p>On the account page, you first need to log in<ul><li><span>Login:</span>testemail_1@gmail.com;<span>Password:</span>Password1</li><li><span>Login:</span>testemail_2@gmail.com;<span>Password:</span>Password2</li><li><span>Login:</span>testemail_3@gmail.com;<span>Password:</span>Password3</li></ul>After that, the user will have access to information about his orders, address and account information that he can change.</p><p>All forms are made with Formik and validatable by yup. Data is stored with FirebaseFirestore.</p>",
+        "releaseDate": 	1665393570,
+        "stack": ["React", "TypeScript", "SCSS", "Redux", "Formik", "Firebase", "Redux Toolkit", "Swiper", "react-router-dom"],
+        "externalLinks": [
+            {
+                "link": "https://react-pet-dugilan.web.app/",
+                "title": "Home Page"
+            },
+            {
+                "link": "https://react-pet-dugilan.web.app/browse/product/DugiLan",
+                "title": "Product Page"
+            },
+            {
+                "link": "https://react-pet-dugilan.web.app/account",
+                "title": "Account Page"
+            },
+            {
+                "link": "https://react-pet-dugilan.web.app/card",
+                "title": "Shopping Card Page"
+            }
+        ]
     }
 ]
