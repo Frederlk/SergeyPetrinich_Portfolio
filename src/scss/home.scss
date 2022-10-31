@@ -448,6 +448,9 @@
             background-color: $c_dark_2;
             color: $c_dark_6;
         }
+        @media (max-width: $mobileSmall) {
+            gap: rem(10);
+        }
     }
 
     &__panel {
@@ -613,10 +616,10 @@
             @extend %text_1;
             color: $c_dark_1;
         }
-        @media (max-width: $mobile) {
-            flex: 0 0 rem(70);
+        @media (max-width: $mobileSmall) {
+            gap: rem(10);
+            justify-content: space-between;
         }
-        background-color: $c_dark_4;
     }
 
     &__link {

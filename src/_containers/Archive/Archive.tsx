@@ -2,10 +2,9 @@ import { FC, useMemo, useState, useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import ReactPaginate from "react-paginate";
 import { CSSTransition } from "react-transition-group";
-import { IPet } from "../../models/models";
-
 import { scroller } from "react-scroll";
 
+import { IPet } from "../../models/models";
 import { firebaseAPI } from "../../services/firebaseAPI";
 import { Top } from "../../_components";
 import ArchiveItem from "./ArchiveItem";
@@ -40,7 +39,6 @@ const Archive: FC = () => {
     const handlePageClick = (event: any) => {
         if (pets) {
             updateAnimation && setUpdateAnimation(false);
-            // listRef.current && window.scrollTo(0, listRef.current.offsetTop);
             scroller.scrollTo("archive", { smooth: true, duration: 500, offset: -50 });
             setTimeout(() => {
                 const newOffset = (event.selected * itemsPerPage) % pets.length;
@@ -78,8 +76,12 @@ const Archive: FC = () => {
                         <>
                             <CSSTransition
                                 nodeRef={listRef}
-                                timeout={currentItems.length * 100}
                                 classNames={"list"}
+                                timeout={{
+                                    appear: 100,
+                                    enter: 100,
+                                    exit: currentItems.length * 100,
+                                }}
                                 in={updateAnimation}
                             >
                                 <ul ref={listRef} className="archive__list">
