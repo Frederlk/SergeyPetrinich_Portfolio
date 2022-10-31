@@ -82,13 +82,13 @@ body {
             top: 0;
             left: 0;
             z-index: 10;
-            transition: backdrop-filter 0.3s ease 0.5s, opacity 0.3s ease 0.5s, opacity 0.3s ease 0.5s;
+            transition: backdrop-filter 0.3s ease 0.5s, opacity 0.3s ease 0.5s, visibility 0.3s ease 0.5s;
             opacity: 0;
             visibility: hidden;
             .menu-open & {
                 visibility: visible;
                 opacity: 1;
-                transition: backdrop-filter 0.3s ease 0s, opacity 0.3s ease 0s, opacity 0.3s ease 0s;
+                transition: backdrop-filter 0.3s ease 0s, opacity 0.3s ease 0s, visibility 0.3s ease 0s;
                 backdrop-filter: blur(rem(6));
                 -webkit-backdrop-filter: blur(rem(6));
             }

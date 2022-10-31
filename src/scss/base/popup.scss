@@ -208,6 +208,10 @@
                 }
             }
         }
+        @media (max-width: $mobileSmall) {
+            gap: rem(20);
+            font-size: rem(24) !important;
+        }
     }
 
     &__description {
@@ -222,11 +226,16 @@
         ul {
             margin-top: rem(-10);
             padding-left: rem(10);
+
             li {
                 display: flex;
+                flex-wrap: wrap;
                 align-items: center;
-                gap: rem(5);
+                gap: 0 rem(5);
                 color: $c_dark_4;
+                &:not(:last-child) {
+                    margin-bottom: rem(5);
+                }
                 span {
                     color: $c_primary;
                 }

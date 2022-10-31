@@ -5,6 +5,7 @@ import { About, Archive, Footer, Fullscreen, Header, Recent, Skills } from "./_c
 import dynamicAdaptive from "./helpers/dynamic_adapt";
 import { CSSTransition } from "react-transition-group";
 import { Spinner } from "./_components";
+import useFullFix from "./hooks/useFullFix";
 
 const App: FC = () => {
     const [mounted, setMounted] = useState(false);
@@ -26,6 +27,8 @@ const App: FC = () => {
             return () => window.removeEventListener("load", onPageLoad);
         }
     });
+
+    useFullFix();
 
     const wrapperRef = useRef<HTMLDivElement | null>(null);
 

@@ -26,6 +26,7 @@
         background-color: $c_white;
         transition: width 0.3s ease-in-out 0s, margin-left 0.3s ease-in-out 0s;
     }
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.5);
     @media (any-hover: hover) {
         &:hover {
             &::before {
