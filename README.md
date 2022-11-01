@@ -5,9 +5,9 @@ I am a self-driven and detail-oriented Front-end Developer with 2 years of exper
 
 <h3>EXPERIENCE</h3>
 My portfolio includes <strong>40+</strong> modern and responsive Pet Projects. From landing pages to full-fledged websites and the list continues to grow.
-
+<br>
 I try to bring something special to each project, whether it is a new studied technology or a beautiful animation of elements, which will create a pleasant feeling of “expensiveness” when viewing the site, which also positively affects the attitude of potential customers towards the company.
-
+<br>
 Experience has taught me to take website accessibility, responsiveness and performance seriously, especially on mobile devices.
 Right now, I'm focused on learning Node.js and Next.js, which I intend to use in my spare time to develop a website for my Dungeons & Dragons campaigns.
 
