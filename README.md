@@ -1,4 +1,6 @@
-<h1>Frontend Developer</h1>
+<h1><a href="https://petrinich-sergey.web.app">Sergey Petrinich Portfolio</a></h1>
+
+<h2>Frontend Developer</h2>
 I am a self-driven and detail-oriented Frontend developer with 2 years of experience in the industry seeking a position at collaborative team environment. I believe that my technical skills and knowledge will render me a valuable addition to your web development team. I’m passionate about developing responsive, interactive, accessible websites and web features to drive up online traffic and sales, bringing the company to greater heights. 
 
 <h3>Experience</h3>
