@@ -13,20 +13,19 @@ const About: FC = () => {
                 <div className="about__body">
                     <div className="about__content">
                         <p>
-                            Hello! My name is Brittany and I enjoy creating things that live on the internet.
-                            My interest in web development started back in 2012 when I decided to try editing
-                            custom Tumblr themes — turns out hacking together a custom reblog button taught me
-                            a lot about HTML & CSS!
+                            Hello! My name is Sergey and I enjoy creating things that live on the internet. I
+                            try to bring something special to every project, whether it’s a new learned
+                            technology or a beautiful animation of elements, which will create a pleasant
+                            feeling of “expensiveness” when viewing the site, which also positively affects
+                            the attitude of potential customers towards the company.
                         </p>
                         <p>
-                            Fast-forward to today, and I’ve had the privilege of working at an advertising
-                            agency, a start-up, a huge corporation, and a student-led design studio. My main
-                            focus these days is building accessible, inclusive products and digital
-                            experiences at Upstatement for a variety of clients.
+                            Experience has taught me to take website accessibility, responsiveness and
+                            performance seriously, especially on mobile devices.
                         </p>
                         <p>
-                            I also recently launched a course that covers everything you need to build a web
-                            app with the Spotify API using Node & React.
+                            Right now, I’m focused on learning Node.js and Next.js, which I intend to use in
+                            my spare time to develop a website for my Dungeons & Dragons campaigns.
                         </p>
                     </div>
                     <div className="about__image-ibg">

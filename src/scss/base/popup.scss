@@ -94,6 +94,7 @@
     }
 
     &__swiper {
+        @include adaptiveValue("min-height", 400, 200);
     }
 
     &__slide {

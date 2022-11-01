@@ -127,10 +127,10 @@
 
     &__image-ibg {
         position: relative;
-        max-height: rem(400);
+        max-height: rem(450);
         @media (max-width: $mobile) {
             @include adaptiveValue("margin-top", 50, 30, 767.98, 320, 1);
-            @include adaptiveValue("height", 450, 250, 767.98, 320, 1);
+            @include adaptiveValue("min-height", 450, 250, 767.98, 320, 1);
         }
         &::after {
             content: "";
@@ -158,31 +158,27 @@
     &__top {
     }
 
-    &__body {
-        @media (min-width: $mobile) {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            justify-content: center;
-            gap: rem(40);
-        }
-    }
-
-    &__column {
-        text-align: center;
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(5) rem(20);
         &:not(:last-child) {
-            @include adaptiveValue("margin-bottom", 50, 30, 767.98, 320, 1);
+            margin-bottom: rem(35);
+        }
+        &:last-child {
+            .skills__item {
+                color: $c_dark_1;
+            }
         }
     }
 
-    &__subtitle {
+    &__label {
         @extend %text_1;
-        color: $c_dark_1;
-        margin-bottom: rem(20);
+        white-space: nowrap;
     }
 
     &__list {
         display: flex;
-        justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         gap: rem(10);

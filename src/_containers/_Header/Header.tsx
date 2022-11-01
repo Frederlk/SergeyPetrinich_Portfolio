@@ -31,12 +31,7 @@ const Header: FC = () => {
                             <HeaderLink goto="recent" onCloseMenu={onCloseMenu} title="Projects" />
                             <HeaderLink goto="footer" onCloseMenu={onCloseMenu} title="Contact" />
                         </ul>
-                        <a
-                            href="/public/s.pdf"
-                            className="header__btn"
-                            download="Sergey Petrinich CV.pdf"
-                            target="_blank"
-                        >
+                        <a href="/s.pdf" className="header__btn" target="_blank">
                             <span>Resume</span>
                         </a>
                     </nav>
