@@ -10,8 +10,30 @@ I try to bring something special to every project, whether it's a new learned te
 
 Right now, I'm going to be learning Node.js and Next.js, which I intend to use in my spare time to develop a website for my Dungeons & Dragons campaigns.
 
+<h3>Skills</h3>
+Programming Languages
+•	HTML
+•	CSS / SASS
+•	JavaScript (ES6) / TypeScript
+
+Libraries & Frameworks
+•	React
+•	Redux / Redux Toolkit
+•	Tailwind / Bootstrap
+
+Tools & Platforms
+•	Git
+•	Firebase
+•	Vercel
+•	Gulp
+•	Figma
+
 <h3>Education</h3>
 <strong>Bachelor of Marketing:</strong> School of Business and Management Technology of BSU. (2018-2022 // Minsk, Belarus)
+
+<h3>Languages</h3>
+English – C1
+Russian – Native
 
 <h3>Interests</h3>
 
