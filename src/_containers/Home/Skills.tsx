@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 const familiarTechs = [
     "HTML",
     "CSS",
-    "SCSS",
+    "SASS",
     "Tailwind",
     "Bootstrap",
     "JavaScript ",

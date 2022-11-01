@@ -13,7 +13,6 @@ interface IUseGetImagesProps {
 
 const useGetImages = ({ id, title, one }: IUseGetImagesProps) => {
     const [images, setImages] = useState<IImg[]>([]);
-
     const listRef = ref(storage, id);
 
     useEffect(() => {

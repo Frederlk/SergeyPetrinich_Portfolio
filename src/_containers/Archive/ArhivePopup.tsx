@@ -5,9 +5,12 @@ import { IPet } from "../../models/models";
 import { Links } from "../../constants/links";
 import ArchiveSlider from "./ArchiveSlider";
 import { Stack } from "../../_components";
+import { useWindowSize } from "../../hooks";
 
 const ArhivePopup: FC<{ pet: IPet }> = ({ pet }) => {
     const { description, externalLinks, id, releaseDate, stack, title } = pet;
+
+    const windowSize = useWindowSize();
 
     const links = useMemo(
         () =>
@@ -23,7 +26,7 @@ const ArhivePopup: FC<{ pet: IPet }> = ({ pet }) => {
 
     return (
         <div className="archive-popup">
-            <ArchiveSlider id={id} title={title} />
+            {windowSize.width < 479.98 ? null : <ArchiveSlider id={id} title={title} />}
             <div className="archive-popup__body">
                 <h2 className="archive-popup__title">
                     <a target="_blank" rel="noreferrer" href={externalLinks[0].link}>

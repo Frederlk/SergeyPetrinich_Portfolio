@@ -1,9 +1,8 @@
 import { sortData } from "./../helpers/functions";
-import { IImg, IPet } from "./../models/models";
-import { db, storage } from "../firebaseConfig";
+import { IPet } from "./../models/models";
+import { db } from "../firebaseConfig";
 import { createApi, fakeBaseQuery } from "@reduxjs/toolkit/query/react";
 import { collection, getDocs } from "firebase/firestore";
-import { getDownloadURL, listAll, ref } from "firebase/storage";
 
 export const firebaseAPI = createApi({
     reducerPath: "firebaseAPI",
