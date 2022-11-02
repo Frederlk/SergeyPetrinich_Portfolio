@@ -12,9 +12,14 @@ Experience has taught me to take website accessibility, responsiveness and perfo
 Right now, I'm focused on learning Node.js and Next.js, which I intend to use in my spare time to develop a website for my Dungeons & Dragons campaigns.
 
 <h3>SKILLS</h3>
-<div><strong>Programming Languages:</strong> •	HTML • CSS / SASS •	JavaScript (ES6) / TypeScript;</div>
-<div><strong>Libraries & Frameworks:</strong> •	React •	Redux / Redux Toolkit •	Tailwind / Bootstrap;</div>
-<div><strong>Tools & Platforms:</strong> •	Git •	Firebase •	Vercel •	Gulp •	Figma;</div>
+<div><strong>Programming Languages:</strong> HTML • CSS • SASS •	JavaScript (ES6) • TypeScript;</div>
+<div><strong>Libraries & Frameworks:</strong> React •	Redux • Redux Toolkit • Node.js •	Tailwind • Bootstrap • JQuery;</div>
+<div><strong>Version control systems:</strong> Git •	GitHub • GitLab;</div>
+<div><strong>Tools & Platforms:</strong> Firebase •	Heroku •	Vercel •	Gulp;</div>
+<div><strong>IDE:</strong> VSCode •	SublimeText;</div>
+<div><strong>Compilers:</strong> Webpack •	ESBuild;</div>
+<div><strong>Design:</strong> Figma •	Marsy;</div>
+<div><strong>Design:</strong> MongoDB •	Express.js •	Postman •	Docker •	React Native;</div>
 
 <h3>EDUCATION</h3>
 <strong>Bachelor of Marketing:</strong> School of Business and Management Technology of BSU. (2018-2022 // Minsk, Belarus)
