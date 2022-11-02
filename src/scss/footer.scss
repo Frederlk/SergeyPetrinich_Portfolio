@@ -125,7 +125,6 @@
         @extend %btn;
         transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
         cursor: pointer;
-
         span {
             position: relative;
             z-index: 2;
@@ -162,6 +161,8 @@
         @media (max-width: $mobileSmall) {
             min-width: rem(40);
             &::before {
+                position: relative;
+                z-index: 2;
                 display: inline-flex;
                 justify-content: center;
                 align-items: center;

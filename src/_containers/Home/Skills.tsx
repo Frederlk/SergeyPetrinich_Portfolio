@@ -2,10 +2,14 @@ import { FC } from "react";
 import Top from "../../_components/Top";
 import { useInView } from "react-intersection-observer";
 
-const programmingTechs = ["HTML", "CSS", "SASS", "JavaScript", "TypeScript"];
-const frameworksTechs = ["React", "Redux", "Redux Toolkit", "Tailwind", "Bootstrap"];
-const toolsTechs = ["Git", "Firebase", "Gulp", "Figma"];
-const futureTechs = ["Node.js", "Next.js", "Docker", "Webpack", "React Native"];
+const programming = ["HTML", "CSS", "SASS", "JavaScript (ES6)", "TypeScript"];
+const libraries = ["React", "Redux", "Redux Toolkit", "Node.js", "Tailwind", "Bootstrap", "JQuery"];
+const version = ["Git", "GitHub", "GitLab"];
+const tools = ["Firebase", "Vercel", "Heroku", "Gulp"];
+const IDE = ["VSCode", "SublimeText"];
+const compilers = ["Webpack", "ESBuild"];
+const design = ["Figma", "Marsy"];
+const futureTechs = ["MongoDB", "Express.js", "Postman", "Next.js", "Docker", "React Native"];
 
 const familiarItems = (label: string, data: string[]) => (
     <div className="skills__row">
@@ -28,9 +32,13 @@ const Skills: FC = () => {
             <div ref={ref} className="skills__container">
                 <Top className="skills__top" title="Skills" />
                 <div className="skills__body">
-                    {familiarItems("Programming Languages", programmingTechs)}
-                    {familiarItems("Libraries & Frameworks", frameworksTechs)}
-                    {familiarItems("Tools & Platforms", toolsTechs)}
+                    {familiarItems("Programming Languages", programming)}
+                    {familiarItems("Libraries & Frameworks", libraries)}
+                    {familiarItems("Version control systems", version)}
+                    {familiarItems("Tools & Platforms", tools)}
+                    {familiarItems("IDE", IDE)}
+                    {familiarItems("Compilers", compilers)}
+                    {familiarItems("Design", design)}
                     {familiarItems("I'm focused on learning", futureTechs)}
                 </div>
             </div>

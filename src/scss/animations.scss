@@ -169,9 +169,14 @@
 
 //========================================================================================================================================================
 
-.about__container,
-.skills__container {
+.about__container {
     @include inViewBasic(0, rem(30), 0.8, 0, true);
+}
+
+@for $i from 1 through 8 {
+    .skills__row:nth-of-type(#{$i}) {
+        @include inViewBasic(0, rem(30), 0.8, ($i - 1) * 0.1, true);
+    }
 }
 
 .recent {

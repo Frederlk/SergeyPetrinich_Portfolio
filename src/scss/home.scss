@@ -58,8 +58,8 @@
         transform: translate(-50%, 0px);
         display: inline-flex;
         justify-content: center;
-        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
         align-items: center;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
         &::before {
             content: "";
             width: rem(3);
@@ -163,7 +163,7 @@
         flex-wrap: wrap;
         gap: rem(5) rem(20);
         &:not(:last-child) {
-            margin-bottom: rem(35);
+            margin-bottom: rem(25);
         }
         &:last-child {
             .skills__item {
@@ -346,16 +346,17 @@
             background-color: $c_dark_6;
             transition: opacity 0.3s ease 0s;
         }
-        @media (any-hover: hover) {
-            &:hover {
-                &::after {
-                    opacity: 0;
-                }
-            }
-        }
+
         @media (min-width: $mobile) {
             flex: 0 1 calc(50% + rem(100));
             margin-left: rem(-100);
+            @media (any-hover: hover) {
+                &:hover {
+                    &::after {
+                        opacity: 0;
+                    }
+                }
+            }
         }
         @media (max-width: $mobile) {
             position: absolute;
