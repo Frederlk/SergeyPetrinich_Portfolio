@@ -1,6 +1,6 @@
 <h1><a href="https://petrinich-sergey.web.app">Sergey Petrinich Portfolio</a></h1>
 
-<h2>FRONTEND DEVELOPER</h2>
+<h2>FRONT-END DEVELOPER</h2>
 I am a self-driven and detail-oriented Front-end Developer with 2 years of experience. I believe that my technical skills and knowledge will make me a valuable addition to your web development team. I am passionate about developing responsive, interactive, accessible websites and web features to increase online traffic and sales and take the company to the next level.
 
 <h3>EXPERIENCE</h3>
@@ -11,20 +11,30 @@ I try to bring something special to each project, whether it is a new studied te
 Experience has taught me to take website accessibility, responsiveness and performance seriously, especially on mobile devices.
 Right now, I'm focused on learning Node.js and Next.js, which I intend to use in my spare time to develop a website for my Dungeons & Dragons campaigns.
 
-<h3>SKILLS</h3>
-<div><strong>Programming Languages:</strong> HTML • CSS • SASS •	JavaScript (ES6) • TypeScript;</div>
-<div><strong>Libraries & Frameworks:</strong> React •	Redux • Redux Toolkit • Node.js •	Tailwind • Bootstrap • JQuery;</div>
-<div><strong>Version control systems:</strong> Git •	GitHub • GitLab;</div>
-<div><strong>Tools & Platforms:</strong> Firebase •	Heroku •	Vercel •	Gulp;</div>
-<div><strong>IDE:</strong> VSCode •	SublimeText;</div>
-<div><strong>Compilers:</strong> Webpack •	ESBuild;</div>
-<div><strong>Design:</strong> Figma •	Marsy;</div>
+<h3>TECHNICAL SKILLS</h3>
+
+- <strong>Programming Languages:</strong> HTML • CSS • SASS •	JavaScript (ES6) • TypeScript;
+
+- <strong>Libraries & Frameworks:</strong> React •	Redux • Redux Toolkit • Node.js •	Tailwind • Bootstrap • JQuery;
+ 
+- <strong>Version control systems:</strong> Git •	GitHub • GitLab;
+ 
+- <strong>Tools & Platforms:</strong> Firebase •	Heroku •	Vercel •	Gulp;
+ 
+- <strong>IDE:</strong> VSCode •	SublimeText;
+ 
+- <strong>Compilers:</strong> Webpack •	ESBuild;
+ 
+- <strong>Design:</strong> Figma •	Marsy;
 
 <h3>EDUCATION</h3>
 <strong>Bachelor of Marketing:</strong> School of Business and Management Technology of BSU. (2018-2022 // Minsk, Belarus)
 
 <h3>LANGUAGES</h3>
-English – C1 • Russian – Native
+
+- English – C1 
+
+- Russian – Native
 
 <h3>INTERESTS</h3>
 In my free time, I can play the guitar or the piano. Also, I have already DMed <strong>100+</strong> weekly Dungeons & Dragons games. 
