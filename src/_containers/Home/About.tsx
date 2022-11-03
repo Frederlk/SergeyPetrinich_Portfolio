@@ -32,10 +32,10 @@ const About: FC = () => {
                     <div className="about__image-ibg">
                         <Picture
                             srcWebp={
-                                "https://firebasestorage.googleapis.com/v0/b/petrinich-sergey----portfolio.appspot.com/o/_Profile%2F1.webp?alt=media&token=08c1dc50-62dc-491b-a96f-4705bccf3a61"
+                                "https://firebasestorage.googleapis.com/v0/b/petrinich-sergey----portfolio.appspot.com/o/_Profile%2F1.webp?alt=media"
                             }
                             fallbackSrc={
-                                "https://firebasestorage.googleapis.com/v0/b/petrinich-sergey----portfolio.appspot.com/o/_Profile%2F1.jpg?alt=media&token=77755aa2-c351-4e9c-b935-4c5fd08b60fc"
+                                "https://firebasestorage.googleapis.com/v0/b/petrinich-sergey----portfolio.appspot.com/o/_Profile%2F1.jpg?alt=media"
                             }
                             alt={"фото"}
                         />
