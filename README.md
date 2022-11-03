@@ -19,7 +19,6 @@ Right now, I'm focused on learning Node.js and Next.js, which I intend to use in
 <div><strong>IDE:</strong> VSCode •	SublimeText;</div>
 <div><strong>Compilers:</strong> Webpack •	ESBuild;</div>
 <div><strong>Design:</strong> Figma •	Marsy;</div>
-<div><strong>Design:</strong> MongoDB •	Express.js •	Postman •	Docker •	React Native;</div>
 
 <h3>EDUCATION</h3>
 <strong>Bachelor of Marketing:</strong> School of Business and Management Technology of BSU. (2018-2022 // Minsk, Belarus)
