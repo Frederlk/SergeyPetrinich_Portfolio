@@ -31,7 +31,12 @@ const Header: FC = () => {
                             <HeaderLink goto="recent" onCloseMenu={onCloseMenu} title="Projects" />
                             <HeaderLink goto="footer" onCloseMenu={onCloseMenu} title="Contact" />
                         </ul>
-                        <a href="/s.pdf" className="header__btn" target="_blank">
+                        <a
+                            href="https://firebasestorage.googleapis.com/v0/b/petrinich-sergey.appspot.com/o/Petrinich%20Sergey%20CV.pdf?alt=media&token=a0d29e15-bcb4-4c44-8e53-10a8956a63d0"
+                            className="header__btn"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
                             <span>Resume</span>
                         </a>
                     </nav>

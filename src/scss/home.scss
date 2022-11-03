@@ -110,7 +110,7 @@
     &__body {
         @media (min-width: $mobile) {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr minmax(rem(270), percent(350, 992));
             gap: rem(40);
         }
     }
@@ -130,7 +130,9 @@
         max-height: rem(450);
         @media (max-width: $mobile) {
             @include adaptiveValue("margin-top", 50, 30, 767.98, 320, 1);
-            @include adaptiveValue("min-height", 450, 250, 767.98, 320, 1);
+            max-width: rem(300);
+            min-height: rem(350);
+            margin: 0px auto;
         }
         &::after {
             content: "";

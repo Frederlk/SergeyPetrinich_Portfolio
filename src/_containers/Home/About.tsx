@@ -24,17 +24,18 @@ const About: FC = () => {
                             performance seriously, especially on mobile devices.
                         </p>
                         <p>
-                            Right now, I’m focused on learning Node.js and Next.js, which I intend to use in
-                            my spare time to develop a website for my Dungeons & Dragons campaigns.
+                            Right now, I’m focused on learning Next.js and several back-end technologies,
+                            which I intend to use in my spare time to develop a website for my Dungeons &
+                            Dragons campaigns.
                         </p>
                     </div>
                     <div className="about__image-ibg">
                         <Picture
                             srcWebp={
-                                "https://sun9-85.userapi.com/impg/cJlKQVb2k0KgjOYWVXr9CEsnEo3kGCUNh8ARhw/gFwTYG-wxSw.jpg?size=862x1078&quality=96&sign=580c14e6951e16d966a1e4e9aef4ad02&type=album"
+                                "https://firebasestorage.googleapis.com/v0/b/petrinich-sergey----portfolio.appspot.com/o/_Profile%2F1.webp?alt=media&token=08c1dc50-62dc-491b-a96f-4705bccf3a61"
                             }
                             fallbackSrc={
-                                "https://sun9-85.userapi.com/impg/cJlKQVb2k0KgjOYWVXr9CEsnEo3kGCUNh8ARhw/gFwTYG-wxSw.jpg?size=862x1078&quality=96&sign=580c14e6951e16d966a1e4e9aef4ad02&type=album"
+                                "https://firebasestorage.googleapis.com/v0/b/petrinich-sergey----portfolio.appspot.com/o/_Profile%2F1.jpg?alt=media&token=77755aa2-c351-4e9c-b935-4c5fd08b60fc"
                             }
                             alt={"фото"}
                         />
