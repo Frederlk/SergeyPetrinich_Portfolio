@@ -557,7 +557,7 @@
         flex: 0 0 rem(150);
         font-size: rem(20);
         @include scrollbars(rem(5), $c_primary, transparent);
-        overflow: auto;
+        overflow-x: auto;
         .archive__panel_top & {
             @extend %text_1;
             color: $c_dark_1 !important;
