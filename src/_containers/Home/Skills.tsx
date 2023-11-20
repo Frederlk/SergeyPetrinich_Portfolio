@@ -2,7 +2,14 @@ import { FC } from 'react';
 import Top from '../../_components/Top';
 import { useInView } from 'react-intersection-observer';
 
-const programming = ['HTML', 'CSS', 'SASS', 'JavaScript (ES6)', 'TypeScript'];
+const programming = [
+  'HTML',
+  'CSS',
+  'SASS',
+  'JavaScript (ES6)',
+  'TypeScript',
+  'Markdown',
+];
 const libraries = [
   'React',
   'Next.js',
@@ -23,6 +30,12 @@ const version = ['Git', 'BitBucket', 'GitHub', 'GitLab'];
 const tools = [
   'ChatGPT',
   'Firebase',
+  'Supabase',
+  'Sanity',
+  'GraphQL',
+  'Apollo',
+  'MongoDB',
+  'Stripe',
   'Jenkins',
   'Swagger',
   'Jira',
@@ -30,7 +43,7 @@ const tools = [
   'Heroku',
   'Gulp',
 ];
-const IDE = ['VSCode', 'SublimeText'];
+const IDE = ['Visual Studio Code', 'SublimeText'];
 const compilers = ['Webpack', 'ESBuild'];
 const design = ['Figma', 'Marsy'];
 const futureTechs = ['Express.js', 'Docker', 'React Native'];
