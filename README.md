@@ -1,41 +1,44 @@
-<h1><a href="https://petrinich-sergey.web.app">Sergey Petrinich Portfolio</a></h1>
+# [Sergey Petrinich Portfolio](https://petrinich-sergey.web.app)
 
-<h2>FRONT-END DEVELOPER</h2>
-I am a self-driven and detail-oriented Front-end Developer with 2 years of experience. I believe that my technical skills and knowledge will make me a valuable addition to your web development team. I am passionate about developing responsive, interactive, accessible websites and web features to increase online traffic and sales and take the company to the next level.
+## FRONT-END DEVELOPER
 
-<h3>EXPERIENCE</h3>
-My portfolio includes <strong>40+</strong> modern and responsive Pet Projects. From landing pages to full-fledged websites and the list continues to grow.
-<br>
+I am a self-driven and detail-oriented Front-end Developer with **4+** years of experience. I believe that my technical skills and knowledge will make me a valuable addition to your web development team. I am passionate about developing responsive, interactive, accessible websites and web features to increase online traffic and sales and take the company to the next level.
+
+### EXPERIENCE
+
+My portfolio includes **40+** modern and responsive Pet Projects. From landing pages to full-fledged websites and the list continues to grow.
+
 I try to bring something special to each project, whether it is a new studied technology or a beautiful animation of elements, which will create a pleasant feeling of “expensiveness” when viewing the site, which also positively affects the attitude of potential customers towards the company.
-<br>
+
 Experience has taught me to take website accessibility, responsiveness and performance seriously, especially on mobile devices.
-Right now, I'm focused on learning Node.js and Next.js, which I intend to use in my spare time to develop a website for my Dungeons & Dragons campaigns.
 
-<h3>TECHNICAL SKILLS</h3>
+### TECHNICAL SKILLS
 
--   <strong>Programming Languages:</strong> HTML • CSS • SASS • JavaScript (ES6) • TypeScript;
+-   **Languages:** JavaScript • TypeScript • HTML • CSS • SASS • Markdown;
+-   **Front-end Frameworks & Libraries:** React • Next.js • React Native • Expo • Tailwind CSS;
+-   **State & Form Management:** Zustand • Redux Toolkit • React Hook Form • Formik;
+-   **Data Validation:** Zod • Yup;
+-   **Data Fetching & API Tools:** Fetch API • Axios • React Query • GraphQL • Swagger;
+-   **Internationalization:** next-intl;
+-   **Databases & ORMs:** PostgreSQL • MySQL • Prisma;
+-   **Authentication:** Supabase Auth • Clerk • Next Auth;
+-   **Cloud & Deployment Services:** Supabase • Google Cloud • AWS • Vercel • Netlify;
+-   **Version Control & CI/CD:** Git (GitHub, GitLab) • GitHub Actions • Husky • Jenkins;
+-   **Testing & Code Quality:** Jest • ESLint • Prettier;
+-   **Content Management Systems:** Builder.io • Sanity.io • Payload CMS;
+-   **Design Tools:** Figma • Marsy;
+-   **Payment Processing:** Stripe • PayPal;
 
--   <strong>Libraries & Frameworks:</strong> React • Redux • Redux Toolkit • Node.js • Tailwind • Bootstrap • JQuery;
+### EDUCATION
 
--   <strong>Version control systems:</strong> Git • GitHub • GitLab;
+**Bachelor of Marketing:** School of Business and Management Technology of BSU. (2018-2022 // Minsk, Belarus)
 
--   <strong>Tools & Platforms:</strong> Firebase • Heroku • Vercel • Gulp;
-
--   <strong>IDE:</strong> VSCode • SublimeText;
-
--   <strong>Compilers:</strong> Webpack • ESBuild;
-
--   <strong>Design:</strong> Figma • Marsy;
-
-<h3>EDUCATION</h3>
-<strong>Bachelor of Marketing:</strong> School of Business and Management Technology of BSU. (2018-2022 // Minsk, Belarus)
-
-<h3>LANGUAGES</h3>
+### LANGUAGES
 
 -   English – C1
-
 -   Russian – Native
 
-<h3>INTERESTS</h3>
-In my free time, I can play the guitar or the piano. Also, I have already DMed <strong>100+</strong> weekly Dungeons & Dragons games. 
+### INTERESTS
+
+In my free time, I can play the guitar or the piano. Also, I have already DMed **300+** weekly Dungeons & Dragons games.
 Thanks to this hobby, I have further developed skills such as Strategic Thinking, Creativity, Teamwork, Leadership, Problem-Solving, Organizing, Facilitation, Commitment, Research & Planning.
